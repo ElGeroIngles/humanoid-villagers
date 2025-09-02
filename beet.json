@@ -1,0 +1,10 @@
+{
+    "name": "humanoid_villagers",
+    "description": "Humanoid Villagers dev datapack",
+    "data_pack": {
+        "load": ["src/datapack"]
+    },
+    "resource_pack": {
+        "load": ["src/resourcepack"]
+    }
+}
