@@ -55,3 +55,5 @@ And the way to add skins to the pool is like this (for this you will need to use
 # Add skins to the pool:
 data modify storage humvil:pool skins append value 'profile:{texture:"foo:path/to/texture/without/the/png/extension"}'
 ```
+> [!WARNING]  
+> Always append to "humvil:pool skins", never override its contents.
