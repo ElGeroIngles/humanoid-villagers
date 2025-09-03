@@ -5,15 +5,14 @@ scoreboard objectives add humvil.transform.gender dummy
 scoreboard objectives add humvil.transform.model_type dummy
 
 scoreboard objectives add humvil.settings dummy
+scoreboard objectives add humvil.global dummy
 
 scoreboard objectives add humvil.temp dummy
 
-# Set default settings:
-execute unless score #use_real_players humvil.settings matches 0.. run scoreboard players set #use_real_players humvil.settings 1
-execute unless score #allow_capes humvil.settings matches 0.. run scoreboard players set #allow_capes humvil.settings 0
-execute unless score #main_hand humvil.settings matches 0.. run scoreboard players set #main_hand humvil.settings 0
-execute unless score #outer_skins_to_hide humvil.settings matches 0.. run scoreboard players set #outer_skins_to_hide humvil.settings 0
+scoreboard objectives add humvil.id dummy
 
+# Initialize default config:
+execute unless score $init humvil.global matches ..0 run function humvil:zzz/init
 
 tellraw @a [{"text":"[HUMVIL] ","color":"yellow"},{"translate":"load.humvil.message.3","color":"green"}]
 tellraw @a [{"text":"[HUMVIL] ","color":"yellow"},{"text":"Humanoid Villagers","underlined":true,"color":"gold","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/humanoid-villagers"}}," ",{"text":"(v0.0.1)","underlined":true,"color":"green","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/humanoid-villagers/changelog"},"hover_event":{"action":"show_text","value":[{"translate":"load.humvil.message.5"}]}},{"text":" - ","color":"gray"},{"translate":"load.humvil.message.4","color":"blue"},{"text":"☽ Eclipse Studios","underlined":true,"color":"blue","click_event":{"action":"open_url","url":"https://www.youtube.com/@EclipseStudiosMC"}}]
