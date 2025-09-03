@@ -5,4 +5,4 @@
 # $(skin) --> Profile containing the skin texture to use
 
 # Summon:
-$execute at @s run summon minecraft:mannequin ~ ~ ~ {CustomName:$(name),model:$(model_type),$(skin)}
+$execute at @s run summon minecraft:mannequin ~ ~ ~ {CustomName:$(name),model:$(model_type),$(skin),Tags:["smithed.entity","humvil.human"]}

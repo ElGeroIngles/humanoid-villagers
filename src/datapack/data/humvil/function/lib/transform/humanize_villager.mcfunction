@@ -1,6 +1,9 @@
 # @s is a non-human villager!
 # Output: Transform @s to a human.
 
+# Cancel if @s is a custom entity:
+execute if entity @s[tag=smithed.entity] run return fail
+
 # Get male, female (0 for male and 1 for female):
 execute store result score @s humvil.transform.gender run random value 0..1
 
