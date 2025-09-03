@@ -4,5 +4,13 @@
 # $(model_type) --> Its model type (wide or slim)
 # $(skin) --> Profile containing the skin texture to use
 
+# Test:
+# $tellraw @a ["My name is: ",$(name)]
+# tellraw @a ["My score was: ",{score:{name:"@s",objective:"humvil.transform.gender"}}]
+# $tellraw @a "My model type is: $(model_type)"
+# tellraw @a ["My score was: ",{score:{name:"@s",objective:"humvil.transform.model_type"}}]
+# tellraw @a ["My skin is: ",{nbt:"mannequin.skin",storage:"humvil:random"}]
+
 # Summon:
-$execute at @s run summon minecraft:mannequin ~ ~ ~ {CustomName:$(name),model:$(model_type),$(skin),Tags:["smithed.entity","humvil.human"]}
+$execute at @s run summon minecraft:mannequin ~ ~ ~ {CustomName:$(name),model:'$(model_type)',$(skin),Tags:["smithed.entity","humvil.human.needs_config"]}
+# $say {CustomName:$(name),model:'$(model_type)',$(skin),Tags:["smithed.entity","humvil.human.needs_config"]}

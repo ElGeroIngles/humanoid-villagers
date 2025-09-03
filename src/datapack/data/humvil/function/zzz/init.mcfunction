@@ -8,4 +8,4 @@ scoreboard players set $outer_skins_to_hide humvil.settings 0
 scoreboard players set $global humvil.id 0
 
 # Only run once per world.
-scoreboard players set $init humvil.global 0
+# scoreboard players set $init humvil.global 0

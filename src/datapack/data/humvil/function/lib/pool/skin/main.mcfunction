@@ -5,7 +5,7 @@
 
 # Reset previous pool:
 data modify storage humvil:lib output set value ''
-data modify storage humvil:pool skins set value []
+data merge storage humvil:pool {skins:[]}
 
 # Get all skins:
 execute if score @s humvil.transform.gender matches 0 if score @s humvil.transform.model_type matches 0 run function #humvil:pool/skins/male/wide
@@ -18,10 +18,10 @@ execute if score @s humvil.transform.gender matches 2.. if score @s humvil.trans
 execute if score @s humvil.transform.gender matches 2.. if score @s humvil.transform.model_type matches 1 run function #humvil:pool/skins/both/slim
 
 # Get length of array:
-execute store result score #len humvil.temp run data get storage humvil:pool skins
+execute store result score $len humvil.temp run data get storage humvil:pool skins
 
 # Prepare macro call:
-execute store result storage humvil:temp macro.index int 1 run scoreboard players remove #len humvil.temp 1
+execute store result storage humvil:temp macro.index int 1 run scoreboard players remove $len humvil.temp 1
 data modify storage humvil:temp macro.array set value "humvil:pool skins"
 
 # Get a random name:

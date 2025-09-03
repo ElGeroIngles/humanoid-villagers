@@ -13,10 +13,10 @@ execute if score @s humvil.transform.gender matches 1 run function #humvil:pool/
 execute if score @s humvil.transform.gender matches 2.. run function #humvil:pool/names/all
 
 # Get length of array:
-execute store result score #len humvil.temp run data get storage humvil:pool names
+execute store result score $len humvil.temp run data get storage humvil:pool names
 
 # Prepare macro call:
-execute store result storage humvil:temp macro.index int 1 run scoreboard players remove #len humvil.temp 1
+execute store result storage humvil:temp macro.index int 1 run scoreboard players remove $len humvil.temp 1
 data modify storage humvil:temp macro.array set value "humvil:pool names"
 
 # Get a random name:
