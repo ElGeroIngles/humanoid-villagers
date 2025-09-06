@@ -49,6 +49,23 @@ data modify entity @s CustomName set from entity @n[tag=humvil.human.needs_confi
 # Make the entity's hitbox big enough so that it covers the human at all times:
 attribute @s minecraft:scale modifier add humvil:cover_human_hitbox 0.2 add_multiplied_base
 
+# Pass equipment to human:
+item replace entity @n[tag=humvil.human.needs_config] armor.head from entity @s armor.head
+item replace entity @n[tag=humvil.human.needs_config] armor.chest from entity @s armor.chest
+item replace entity @n[tag=humvil.human.needs_config] armor.legs from entity @s armor.legs
+item replace entity @n[tag=humvil.human.needs_config] armor.feet from entity @s armor.feet
+
+item replace entity @n[tag=humvil.human.needs_config] weapon.mainhand from entity @s weapon.mainhand
+item replace entity @n[tag=humvil.human.needs_config] weapon.offhand from entity @s weapon.offhand
+
+item replace entity @s armor.head with minecraft:air
+item replace entity @s armor.chest with minecraft:air
+item replace entity @s armor.legs with minecraft:air
+item replace entity @s armor.feet with minecraft:air
+
+item replace entity @s weapon.mainhand with minecraft:air
+item replace entity @s weapon.offhand with minecraft:air
+
 # Set tags:
 tag @s add humvil.human.transformed
 tag @s add humvil.linked

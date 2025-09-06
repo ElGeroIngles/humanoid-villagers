@@ -21,3 +21,4 @@
         - Setting to allow capes on skins (defaults to false).
         - Setting to allow default main hand, either left, right or random (defaults to random).
         - Setting to allow to hide the outer skin layers that the user may want to hide (defaults to show everything).
+        - Setting to pass all of the original entity's equipment to its human (defaults to true).
