@@ -1,0 +1,82 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Humanoid Villagers",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {"translate":"dialog.humvil.about.desc"},
+      "width": 300
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [{"text":"v0.0.1","underlined":true,"color":"gray","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/humanoid-villagers/changelog"},"hover_event":{"action":"show_text","value":[{"translate":"load.humvil.message.5"}]}}],
+      "width": 300
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [{"translate":"load.humvil.message.4","color":"white","underlined": false},{"text":"☽ Eclipse Studios","underlined":true,"color":"blue","click_event":{"action":"open_url","url":"https://modrinth.com/organization/eclipse-studios"}}],
+      "width": 300
+    }
+  ],
+  "actions": [
+    {
+      "label": "Modrinth",
+      "action": {
+        "type": "open_url",
+        "url": "https://modrinth.com/datapack/humanoid-villagers"
+      }
+    },
+    {
+      "label": "CurseForge",
+      "action": {
+        "type": "open_url",
+        "url": "https://discord.gg/4pYjW9btNc"
+      }
+    },
+    {
+      "label": "Planet Minecraft",
+      "action": {
+        "type": "open_url",
+        "url": "https://discord.gg/4pYjW9btNc"
+      }
+    },
+    {
+      "label": "GitHub",
+      "action": {
+        "type": "open_url",
+        "url": "https://github.com/ElGeroIngles/humanoid-villagers"
+      }
+    },
+    {
+      "label": "Discord",
+      "action": {
+        "type": "open_url",
+        "url": "https://discord.gg/4pYjW9btNc"
+      }
+    },
+    {
+      "label": "Issues",
+      "action": {
+        "type": "open_url",
+        "url": "https://discord.gg/4pYjW9btNc"
+      }
+    },
+    {
+      "label": {"translate":"dialog.humvil.about.config"},
+      "action": {
+        "type": "show_dialog",
+        "dialog": "humvil:config"
+      }
+    }
+  ],
+  "exit_action": {
+    "action": {
+      "type": "show_dialog",
+      "dialog": "smithed:data_packs"
+    },
+    "label": {
+      "translate": "gui.back"
+    },
+    "width": 200
+  }
+}

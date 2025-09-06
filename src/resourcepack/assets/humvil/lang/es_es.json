@@ -5,6 +5,33 @@
     "load.humvil.message.4": "Por ",
     "load.humvil.message.5": "¡Haz click para ver los cambios!",
     
+    "dialog.humvil.about.desc": "¡Transforma a los aldeanos encontrados en las aldeas en humanos (PNJs)!\nUtiliza la nueva entidad de Maniquí.",
+    "dialog.humvil.about.config": "Configuración...",
+
+    "dialog.humvil.config.desc": "Este datapack tiene las siguientes configuraciones, estas son las que están por defecto:",
+
+    "dialog.humvil.config.pool.name": "Los nuevos humanos se seleccionarán de",
+    "dialog.humvil.config.pool.options.1": "Jugadores que hayan estado en este mundo y otros aleatorios.",
+    "dialog.humvil.config.pool.options.2": "Solo jugadores que hayan estado en este mundo.",
+    "dialog.humvil.config.pool.options.3": "Solo aleatorios.",
+
+    "dialog.humvil.config.hide.options.1": "Ocultar capa.",
+    "dialog.humvil.config.hide.options.2": "Ocultar chaqueta.",
+    "dialog.humvil.config.hide.options.3": "Ocultar manga izquierda.",
+    "dialog.humvil.config.hide.options.4": "Ocultar manga derecha.",
+    "dialog.humvil.config.hide.options.5": "Ocultar pantalón de la pierna izquierda.",
+    "dialog.humvil.config.hide.options.6": "Ocultar pantalón de la pierna derecha.",
+    "dialog.humvil.config.hide.options.7": "Ocultar sombrero.",
+    
+    "dialog.humvil.config.mainhand.name": "La mano principal del humano será",
+    "dialog.humvil.config.mainhand.options.1": "Aleatoria.",
+    "dialog.humvil.config.mainhand.options.2": "Siempre diestro.",
+    "dialog.humvil.config.mainhand.options.3": "Siempre zurdo.",
+    
+    "dialog.humvil.config.equipment.name": "Los humanos heredan el equipamiento de su entidad original.",
+
+    "dialog.humvil.config.save": "Guardar y Salir",
+
     "names.humvil.male.1": "Miguel",
     "names.humvil.male.2": "Carlos",
     "names.humvil.male.3": "William",

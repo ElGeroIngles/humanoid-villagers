@@ -1,0 +1,141 @@
+{
+  "type": "minecraft:confirmation",
+  "title": "Humanoid Villagers",
+  "can_close_with_escape": true,
+  "pause": true,
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {"translate":"dialog.humvil.config.desc"},
+      "width": 300
+    }
+  ],
+  "inputs": [
+    {
+      "type": "minecraft:single_option",
+      "label": {"translate":"dialog.humvil.config.pool.name"},
+      "key": "human_pool",
+      "label_visible": true,
+      "width": 500,
+      "options": [
+        {
+          "id": "0",
+          "display": {"translate":"dialog.humvil.config.pool.options.1"},
+          "initial": true
+        },
+        {
+          "id": "1",
+          "display": {"translate":"dialog.humvil.config.pool.options.2"}
+        },
+        {
+          "id": "2",
+          "display": {"translate":"dialog.humvil.config.pool.options.3"}
+        }
+      ]
+    },
+    {
+      "type": "minecraft:single_option",
+      "label": {"translate":"dialog.humvil.config.mainhand.name"},
+      "key": "main_hand",
+      "label_visible": true,
+      "width": 500,
+      "options": [
+        {
+          "id": "0",
+          "display": {"translate":"dialog.humvil.config.mainhand.options.1"},
+          "initial": true
+        },
+        {
+          "id": "1",
+          "display": {"translate":"dialog.humvil.config.mainhand.options.2"}
+        },
+        {
+          "id": "2",
+          "display": {"translate":"dialog.humvil.config.mainhand.options.3"}
+        }
+      ]
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "inherit_equipment",
+      "initial": true,
+      "label": {"translate":"dialog.humvil.config.equipment.name"},
+      "on_false": "0",
+      "on_true": "1"
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "hide_cape",
+      "initial": false,
+      "label": {"translate":"dialog.humvil.config.hide.options.1"},
+      "on_false": "0",
+      "on_true": "1"
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "hide_jacket",
+      "initial": false,
+      "label": {"translate":"dialog.humvil.config.hide.options.2"},
+      "on_false": "0",
+      "on_true": "1"
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "hide_left_sleeve",
+      "initial": false,
+      "label": {"translate":"dialog.humvil.config.hide.options.3"},
+      "on_false": "0",
+      "on_true": "1"
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "hide_right_sleeve",
+      "initial": false,
+      "label": {"translate":"dialog.humvil.config.hide.options.4"},
+      "on_false": "0",
+      "on_true": "1"
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "hide_left_leg_pants",
+      "initial": false,
+      "label": {"translate":"dialog.humvil.config.hide.options.5"},
+      "on_false": "0",
+      "on_true": "1"
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "hide_right_leg_pants",
+      "initial": false,
+      "label": {"translate":"dialog.humvil.config.hide.options.6"},
+      "on_false": "0",
+      "on_true": "1"
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "hide_hat",
+      "initial": false,
+      "label": {"translate":"dialog.humvil.config.hide.options.7"},
+      "on_false": "0",
+      "on_true": "1"
+    }
+  ],
+  "no": {
+    "action": {
+      "type": "show_dialog",
+      "dialog": "humvil:about"
+    },
+    "label": {
+      "translate": "gui.cancel"
+    }
+  },
+  "yes": {
+    "label": {
+      "translate": "dialog.humvil.config.save"
+    },
+    "action": {
+      "type": "minecraft:dynamic/run_command",
+      "template": "/function humvil:lib/settings/main {human_pool:$(human_pool),main_hand:$(main_hand),inherit_equipment:$(inherit_equipment),hide_cape:$(hide_cape),hide_jacket:$(hide_jacket),hide_left_sleeve:$(hide_left_sleeve),hide_right_sleeve:$(hide_right_sleeve),hide_left_leg_pants:$(hide_left_leg_pants),hide_right_leg_pants:$(hide_right_leg_pants),hide_hat:$(hide_hat)}"
+    }
+  }
+}

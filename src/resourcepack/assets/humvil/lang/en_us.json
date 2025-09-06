@@ -4,7 +4,34 @@
     "load.humvil.message.3": "Datapack reloaded succesfully!",
     "load.humvil.message.4": "By ",
     "load.humvil.message.5": "Click to see the changelog!",
+
+    "dialog.humvil.about.desc": "Transforms villagers found in villages into humans (NPCs)!\nThis uses the new Mannequin entity.",
+    "dialog.humvil.about.config": "Config...",
+
+    "dialog.humvil.config.desc": "This datapack has the following available settings, this are the default options:",
+
+    "dialog.humvil.config.pool.name": "New humans will be selected from",
+    "dialog.humvil.config.pool.options.1": "Players that have joined this world and random ones.",
+    "dialog.humvil.config.pool.options.2": "Only players that have joined this world.",
+    "dialog.humvil.config.pool.options.3": "Only random ones.",
+
+    "dialog.humvil.config.hide.options.1": "Hide cape.",
+    "dialog.humvil.config.hide.options.2": "Hide jacket.",
+    "dialog.humvil.config.hide.options.3": "Hide left sleeve.",
+    "dialog.humvil.config.hide.options.4": "Hide right sleeve.",
+    "dialog.humvil.config.hide.options.5": "Hide left leg pants.",
+    "dialog.humvil.config.hide.options.6": "Hide right leg pants.",
+    "dialog.humvil.config.hide.options.7": "Hide hat.",
     
+    "dialog.humvil.config.mainhand.name": "The main hand for the humans will be",
+    "dialog.humvil.config.mainhand.options.1": "Random.",
+    "dialog.humvil.config.mainhand.options.2": "Always right-handed.",
+    "dialog.humvil.config.mainhand.options.3": "Always left-handed.",
+    
+    "dialog.humvil.config.equipment.name": "Humans inherit equipment from its original entity.",
+
+    "dialog.humvil.config.save": "Save and Exit",
+
     "names.humvil.male.1": "Mikel",
     "names.humvil.male.2": "Charles",
     "names.humvil.male.3": "William",

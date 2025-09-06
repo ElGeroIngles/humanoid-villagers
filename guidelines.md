@@ -18,7 +18,6 @@
         - Each one of them should have a different randomized skin and name.
         - Make the names and skins easily customizable.
         - Setting to allow to use the name and skin of any player of the server, online or not (defaults to true).
-        - Setting to allow capes on skins (defaults to false).
         - Setting to allow default main hand, either left, right or random (defaults to random).
         - Setting to allow to hide the outer skin layers that the user may want to hide (defaults to show everything).
         - Setting to pass all of the original entity's equipment to its human (defaults to true).
