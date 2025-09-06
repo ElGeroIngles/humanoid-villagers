@@ -1,11 +1,11 @@
 # @s is a non-human villager!
 # Output: Transform @s to a human.
 
-# Cancel if @s is a custom entity:
+# Cancel if @s is a custom entity or if already humanized:
 execute if entity @s[tag=humvil.human.transformed] run return fail
 execute if entity @s[tag=smithed.entity] run return fail
 
-# Get male, female (0 for male and 1 for female):
+# Get male or female (0 for male and 1 for female):
 execute store result score @s humvil.transform.gender run random value 0..1
 
 # Get if model type will be wide or slim, having more chance for one type or for another depending its the gender (wide 0 and slim 1):
