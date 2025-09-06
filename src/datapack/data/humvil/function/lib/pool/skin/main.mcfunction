@@ -13,7 +13,6 @@ execute if score @s humvil.transform.gender matches 0 if score @s humvil.transfo
 execute if score @s humvil.transform.gender matches 1 if score @s humvil.transform.model_type matches 0 run function #humvil:pool/skins/female/wide
 execute if score @s humvil.transform.gender matches 1 if score @s humvil.transform.model_type matches 1 run function #humvil:pool/skins/female/slim
 
-
 execute if score @s humvil.transform.gender matches 2.. if score @s humvil.transform.model_type matches 0 run function #humvil:pool/skins/both/wide
 execute if score @s humvil.transform.gender matches 2.. if score @s humvil.transform.model_type matches 1 run function #humvil:pool/skins/both/slim
 
