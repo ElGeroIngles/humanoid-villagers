@@ -3,6 +3,7 @@
 # $(name) --> Its name
 # $(model_type) --> Its model type (wide or slim)
 # $(skin) --> Profile containing the skin texture to use
+# $(main_hand) --> Main hand of the human
 
 # Debug:
 # tellraw @a "################"
@@ -13,4 +14,4 @@
 # tellraw @a ["My skin is: ",{nbt:"mannequin.skin",storage:"humvil:random"}]
 
 # Summon:
-$execute at @s run summon minecraft:mannequin ~ ~ ~ {CustomName:$(name),profile:{model:'$(model_type)',$(skin)},Tags:["smithed.entity","humvil.human.needs_config"]}
+$execute at @s run summon minecraft:mannequin ~ ~ ~ {CustomName:$(name),profile:{model:'$(model_type)',$(skin)},Tags:["smithed.entity","humvil.human.needs_config"],main_hand:'$(main_hand)'}

@@ -8,9 +8,9 @@ data modify storage humvil:lib output set value ''
 data modify storage humvil:pool names set value []
 
 # Get all names:
-execute if score @s humvil.transform.gender matches 0 run function #humvil:pool/names/male
-execute if score @s humvil.transform.gender matches 1 run function #humvil:pool/names/female
-execute if score @s humvil.transform.gender matches 2.. run function #humvil:pool/names/all
+execute unless score $human_pool humvil.settings matches 1 if score @s humvil.transform.gender matches 0 run function #humvil:pool/names/male
+execute unless score $human_pool humvil.settings matches 1 if score @s humvil.transform.gender matches 1 run function #humvil:pool/names/female
+execute unless score $human_pool humvil.settings matches 1 if score @s humvil.transform.gender matches 2.. run function #humvil:pool/names/all
 
 # Get length of array:
 execute store result score $len humvil.temp run data get storage humvil:pool names

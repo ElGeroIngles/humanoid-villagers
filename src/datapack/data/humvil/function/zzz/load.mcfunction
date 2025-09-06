@@ -3,6 +3,7 @@ tellraw @a [{"text":"[HUMVIL] ","color":"yellow"},{"translate":"load.humvil.mess
 # Scoreboards:
 scoreboard objectives add humvil.transform.gender dummy
 scoreboard objectives add humvil.transform.model_type dummy
+scoreboard objectives add humvil.transform.main_hand dummy
 
 scoreboard objectives add humvil.settings dummy
 scoreboard objectives add humvil.global dummy
