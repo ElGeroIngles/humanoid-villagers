@@ -11,10 +11,10 @@ execute as @n[type=minecraft:villager] run function humvil:lib/transform/humaniz
 ```
 
 # Add custom names and skins
-To add new custom names to the pool you can add your own custom ones using another datapack adding a function to `#humvil:pool/names/<x>` where `<x>` can be:
-- `male`: For masculine names
-- `female`: For femenine names
-- `all`: For both genders
+To add new custom names to the pool you can add your own custom ones using another datapack adding a function to one of the following:
+- `#humvil:pool/names/male`: For masculine names
+- `#humvil:pool/names/female`: For femenine names
+- `#humvil:pool/names/all`: For both genders
 
 For example, if you would like to add new masculine names you would need to add a new function that will be used to add them to the pool, so in this case it will be on `#humvil:pool/names/male`:
 ```json
@@ -46,14 +46,15 @@ To add new custom skins to the pool you can add follow a similar structure, the 
 - `#humvil:pool/skins/both/wide`: For both genders wide skins
 - `#humvil:pool/skins/both/slim`: For both genders slim skins
 
-And the way to add skins to the pool is like this (for this you will need to use a custom resourcepack):
+And the way to add skins to the pool is like this:
 ```mcfunction
 # foo:my_new_custom/skins/male/slim
 # Expected:
 # humvil:pool skins --> Array of textures
 
-# Add skins to the pool:
-data modify storage humvil:pool skins append value 'profile:{texture:"foo:path/to/texture/without/the/png/extension"}'
+# Add skins to the pool (first using a texture file and second without):
+data modify storage humvil:pool skins append value 'texture:"foo:path/to/texture/without/the/png/extension"'
+data modify storage humvil:pool skins append value 'id:[I;-2095468200,-46704017,-1371613937,1122824981],properties:[{name:"textures",value:"e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTFmZTRiYWJkNzVjMjhkYmVhY2ExNGE5Y2I0MmQyM2NlODgzZWEzMzA5NzM4NGRlNDU2Y2Q2NjU5MTI2OGIifX19"}]'
 ```
 > [!WARNING]  
 > Always append to "humvil:pool skins", never override its contents.

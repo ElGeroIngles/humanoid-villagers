@@ -4,7 +4,7 @@
 # Cancel if @s is a custom entity:
 execute if entity @s[tag=humvil.human.transformed] run return fail
 execute if entity @s[tag=smithed.entity] run return fail
-say ###########
+
 # Get male, female (0 for male and 1 for female):
 execute store result score @s humvil.transform.gender run random value 0..1
 
