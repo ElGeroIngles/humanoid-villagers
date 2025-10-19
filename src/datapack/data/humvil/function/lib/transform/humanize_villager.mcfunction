@@ -16,25 +16,19 @@ execute if score $main_hand humvil.settings matches 2 run scoreboard players set
 execute if score @s humvil.transform.main_hand matches 0 run data modify storage humvil:random mannequin.main_hand set value 'right'
 execute if score @s humvil.transform.main_hand matches 1 run data modify storage humvil:random mannequin.main_hand set value 'left'
 
-# Get if model type will be wide or slim, having more chance for one type or for another depending its the gender (wide 0 and slim 1):
-execute if score @s humvil.transform.gender matches 0..1 store result score $model_type humvil.temp run random value 0..3
-
-execute if score @s humvil.transform.gender matches 0 if score $model_type humvil.temp matches 0 run scoreboard players set @s humvil.transform.model_type 1
-execute if score @s humvil.transform.gender matches 0 unless score $model_type humvil.temp matches 0 run scoreboard players set @s humvil.transform.model_type 0
-
-execute if score @s humvil.transform.gender matches 1 if score $model_type humvil.temp matches 0 run scoreboard players set @s humvil.transform.model_type 0
-execute if score @s humvil.transform.gender matches 1 unless score $model_type humvil.temp matches 0 run scoreboard players set @s humvil.transform.model_type 1
-
-execute if score @s humvil.transform.model_type matches ..0 run data modify storage humvil:random mannequin.model_type set value 'wide'
-execute if score @s humvil.transform.model_type matches 1.. run data modify storage humvil:random mannequin.model_type set value 'slim'
-
 # Get name:
 function humvil:lib/pool/name/main
 data modify storage humvil:random mannequin.name set from storage humvil:lib output
 
-# Get skin:
-function humvil:lib/pool/skin/main
-data modify storage humvil:random mannequin.skin set from storage humvil:lib output
+# Get the properties for the mannequin (male, female, right-handed, name, skin...):
+# If selected "Players that have joined this world and random ones", then randomize between the players and the random ones
+execute if score $human_pool humvil.settings matches ..0 store result score $human_pool humvil.temp run random value 0..1
+
+execute if score $human_pool humvil.settings matches 1 run function humvil:lib/transform/summon/player
+execute if score $human_pool humvil.settings matches ..0 if score $human_pool humvil.temp matches 0 run function humvil:lib/transform/summon/player
+
+execute if score $human_pool humvil.settings matches 2.. run function humvil:lib/transform/summon/get_properties
+execute if score $human_pool humvil.settings matches ..0 if score $human_pool humvil.temp matches 1 run function humvil:lib/transform/summon/get_properties
 
 # Summon:
 function humvil:lib/transform/summon/main with storage humvil:random mannequin
