@@ -12,6 +12,9 @@ scoreboard objectives add humvil.temp dummy
 
 scoreboard objectives add humvil.id dummy
 
+scoreboard objectives add humvil.players.JoinGame minecraft.custom:minecraft.leave_game
+scoreboard objectives add humvil.players.Dummy dummy
+
 # Initialize default config:
 execute unless score $init humvil.global matches ..0 run function humvil:zzz/init
 

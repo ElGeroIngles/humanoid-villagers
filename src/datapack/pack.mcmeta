@@ -1,7 +1,8 @@
 {
   "pack": {
     "description": "Changes Villagers to Players",
-    "min_format": 86.0,
-    "max_format": 86.0
+    "min_format": 88,
+    "max_format": 88,
+    "pack_format": 88
   }
 }
