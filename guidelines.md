@@ -20,6 +20,8 @@
         - Add support for baby villagers.
         - Setting to toggle the "NPC" tag of mannequins.
         - Setting to customize the "NPC" tag of mannequins.
+    - Other:
+        - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
 
 - Done:
     - Setting to pass all of the original entity's equipment to its human (defaults to true).

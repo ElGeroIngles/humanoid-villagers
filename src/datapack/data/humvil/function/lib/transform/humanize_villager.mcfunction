@@ -9,9 +9,12 @@ execute if entity @s[tag=smithed.entity] run return fail
 execute store result score @s humvil.transform.gender run random value 0..1
 
 # Get main hand (0 for right-handed and 1 for left-handed):
-execute unless score $main_hand humvil.settings matches 1 unless score $main_hand humvil.settings matches 2 store result score @s humvil.transform.main_hand run random value 0..1
 execute if score $main_hand humvil.settings matches 1 run scoreboard players set @s humvil.transform.main_hand 0
 execute if score $main_hand humvil.settings matches 2 run scoreboard players set @s humvil.transform.main_hand 1
+
+execute unless score $main_hand humvil.settings matches 1 unless score $main_hand humvil.settings matches 2 store result score $main_hand_percentage humvil.temp run random value 0..100
+execute unless score $main_hand humvil.settings matches 1 unless score $main_hand humvil.settings matches 2 if score $main_hand_percentage humvil.temp <= $right-handed_percentage humvil.settings run scoreboard players set @s humvil.transform.main_hand 0
+execute unless score $main_hand humvil.settings matches 1 unless score $main_hand humvil.settings matches 2 if score $main_hand_percentage humvil.temp > $right-handed_percentage humvil.settings run scoreboard players set @s humvil.transform.main_hand 1
 
 execute if score @s humvil.transform.main_hand matches 0 run data modify storage humvil:random mannequin.main_hand set value 'right'
 execute if score @s humvil.transform.main_hand matches 1 run data modify storage humvil:random mannequin.main_hand set value 'left'

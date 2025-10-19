@@ -8,10 +8,11 @@
 scoreboard players set $human_pool humvil.settings 0
 
 # The main hand for the humans will be:
-# 0 --> Random
+# 0 --> Random (90% for right-handed and 10% for left-handed)
 # 1 --> Always right-handed
 # 2 --> Always left-handed
 scoreboard players set $main_hand humvil.settings 0
+scoreboard players set $right-handed_percentage humvil.settings 90
 
 # External layers to hide:
 scoreboard players set $hide_cape humvil.settings 0
@@ -30,5 +31,5 @@ scoreboard players set $inherit_equipment humvil.settings 1
 # Id:
 scoreboard players set $global humvil.id -2147483648
 
-# Only run once per world.
+# Only run once per world:
 # scoreboard players set $init humvil.global 0
