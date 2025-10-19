@@ -18,6 +18,8 @@
         - Setting to allow default main hand, either left, right or random, and allow customization of the percentages (defaults to random and 90% for right-handed and 10% for lenf-handed).
         - Setting to allow to hide the outer skin layers that the user may want to hide (defaults to show everything).
         - Add support for baby villagers.
+        - Setting to toggle the "NPC" tag of mannequins.
+        - Setting to customize the "NPC" tag of mannequins.
 
 - Done:
     - Setting to pass all of the original entity's equipment to its human (defaults to true).
