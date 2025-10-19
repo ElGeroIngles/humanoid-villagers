@@ -9,5 +9,5 @@ scoreboard players operation #PlayerCountPrev humvil.players.Dummy = #PlayerCoun
 # Kill the entity if the one other one is dead:
 execute as @e[tag=humvil.linked] run function humvil:zzz/link/check_kill
 
-# Copy ai from original entity to its human:
+# Add the AI to the human:
 execute as @e[tag=humvil.human] run function humvil:zzz/link/ai

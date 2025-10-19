@@ -28,6 +28,11 @@ scoreboard players set $hide_hat humvil.settings 0
 # 1 --> Yes
 scoreboard players set $inherit_equipment humvil.settings 1
 
+# Hide the "NPC" tag below the mannequin's name:
+# 0 --> No
+# 1 --> Yes
+scoreboard players set $npc_tag humvil.settings 1
+
 # Id:
 scoreboard players set $global humvil.id -2147483648
 

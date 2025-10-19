@@ -14,3 +14,6 @@
 
 # Summon:
 $execute at @s run summon minecraft:mannequin ~ ~ ~ {CustomNameVisible:1b,CustomName:$(name),profile:{$(profile)},Tags:["smithed.entity","humvil.human.needs_config"],main_hand:'$(main_hand)'}
+
+# Hide or unhide the "NPC" tag:
+execute store result entity @n[tag=humvil.human.needs_config] hide_description byte 1 run scoreboard players get $npc_tag humvil.settings

@@ -11,6 +11,10 @@ execute rotated as @n[tag=humvil.api.output.this_entity] run rotate @s ~ ~
 execute if data entity @n[tag=humvil.api.output.this_entity] sleeping_pos unless data entity @s {pose:"sleeping"} run data modify entity @s pose set value "sleeping"
 execute if data entity @s {pose:"sleeping"} unless data entity @n[tag=humvil.api.output.this_entity] sleeping_pos run data modify entity @s pose set value "standing"
 
+# Adjust the "NPC" tag below the mannequin's name in case it has been changed:
+execute if score $npc_tag humvil.settings matches 1 unless data entity @s hide_description run data modify entity @s hide_description set value 1b
+execute if score $npc_tag humvil.settings matches 0 if data entity @s hide_description run data remove entity @s hide_description
+
 # Offset the human by a little bit so its hitbox is always covered:
 execute at @s rotated as @s run tp ^ ^ ^0.005
 

@@ -10,7 +10,7 @@
     - ❤️: Testing
     - 💡: Change in guidelines.md (idea/change)
     - ↩️: Revert changes
-    - 🚀: Improve efficiency
+    - 🚀: Improved efficiency
 
 - To-Do:
     - Features:
