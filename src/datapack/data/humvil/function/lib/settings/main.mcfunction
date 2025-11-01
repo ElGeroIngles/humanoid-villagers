@@ -25,6 +25,8 @@ $scoreboard players set $human_pool humvil.settings $(human_pool)
 $scoreboard players set $main_hand humvil.settings $(main_hand)
 
 # External layers to hide:
+# 0 --> Don't hide that layer
+# 1 --> Hide that layer
 $scoreboard players set $hide_cape humvil.settings $(hide_cape)
 $scoreboard players set $hide_jacket humvil.settings $(hide_jacket)
 $scoreboard players set $hide_left_sleeve humvil.settings $(hide_left_sleeve)

@@ -1,3 +1,6 @@
+# Update the hidden layers array if needed:
+function humvil:lib/settings/update_hidden_layers
+
 # Add new players to an array of all players that have joined this world:
 execute as @a[scores={humvil.players.JoinGame=1..}] run function humvil:lib/pool/players/join
 

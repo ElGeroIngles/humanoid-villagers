@@ -18,6 +18,9 @@ execute if score $npc_tag humvil.settings matches 0 if data entity @s hide_descr
 # Override the "NPC" tag below the mannequin's name in case it changed:
 execute if score $npc_tag humvil.settings matches 0 if score $custom_npc_tag humvil.settings matches 1 run data modify entity @s description set from storage humvil:lib Settings.CustomTag
 
+# Hide the specified layers as in the settings:
+data modify entity @s hidden_layers set from storage humvil:lib Settings.HiddenLayers
+
 # Offset the human by a little bit so its hitbox is always covered:
 execute at @s rotated as @s run tp ^ ^ ^0.005
 

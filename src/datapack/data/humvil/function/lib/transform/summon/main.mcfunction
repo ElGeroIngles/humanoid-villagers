@@ -20,3 +20,6 @@ execute store result entity @n[tag=humvil.human.needs_config] hide_description b
 
 # Add the custom "NPC" tag:
 execute if score $custom_npc_tag humvil.settings matches 1 run data modify entity @n[tag=humvil.human.needs_config] description set from storage humvil:lib Settings.CustomTag
+
+# Hide the specified layers as in the settings:
+data modify entity @n[tag=humvil.human.needs_config] hidden_layers set from storage humvil:lib Settings.HiddenLayers
