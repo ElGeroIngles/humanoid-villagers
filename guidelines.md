@@ -14,16 +14,17 @@
 
 - To-Do:
     - Features:
+        - Add missing settings to the dialog menu to customize them.
         - Setting to make every villager of a village a Mannequin or all villagers (defaults to only villagers from villages).
-        - Setting to allow default main hand, either left, right or random, and allow customization of the percentages (defaults to random and 90% for right-handed and 10% for lenf-handed).
         - Setting to allow to hide the outer skin layers that the user may want to hide (defaults to show everything).
         - Add support for baby villagers.
-        - Setting to toggle the "NPC" tag of mannequins.
         - Setting to customize the "NPC" tag of mannequins.
     - Other:
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
 
 - Done:
+    - Setting to allow default main hand, either left, right or random, and allow customization of the percentages (defaults to random and 90% for right-handed and 10% for left-handed).
+    - Setting to toggle the "NPC" tag of mannequins.
     - Setting to pass all of the original entity's equipment to its human (defaults to true).
     - Setting to allow to use the name and skin of any player of the server, online or not (defaults to true).
     - Each one of them should have a different randomized skin and name.
