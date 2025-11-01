@@ -18,6 +18,7 @@
         - Setting to make every villager of a village a Mannequin or all villagers (defaults to only villagers from villages).
         - Setting to allow to hide the outer skin layers that the user may want to hide (defaults to show everything).
         - Add support for baby villagers.
+        - Setting to allow for animations in mannequins, such as double crouching when near a player or enable the swimming pose while on water (defaults to true).
     - Other:
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
 
