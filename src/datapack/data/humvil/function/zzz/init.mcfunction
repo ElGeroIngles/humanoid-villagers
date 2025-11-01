@@ -1,7 +1,7 @@
 # > humvil:zzz/load
 # Set default settings:
 
-# New humans will be selected from:
+# Human skins will be selected from:
 # 0 --> Players that have joined this world and random ones
 # 1 --> Only players that have joined this world
 # 2 --> Only random ones
@@ -15,6 +15,8 @@ scoreboard players set $main_hand humvil.settings 0
 scoreboard players set $right-handed_percentage humvil.settings 90
 
 # External layers to hide:
+# 0 --> Don't hide that layer
+# 1 --> Hide that layer
 scoreboard players set $hide_cape humvil.settings 0
 scoreboard players set $hide_jacket humvil.settings 0
 scoreboard players set $hide_left_sleeve humvil.settings 0
@@ -32,6 +34,12 @@ scoreboard players set $inherit_equipment humvil.settings 1
 # 0 --> No
 # 1 --> Yes
 scoreboard players set $npc_tag humvil.settings 1
+
+# Override the "NPC" tag below the mannequin's name:
+# 0 --> No
+# 1 --> Yes
+scoreboard players set $custom_npc_tag humvil.settings 0
+data modify storage humvil:lib Settings.CustomTag set value {translate:"entity.minecraft.mannequin.label"}
 
 # Id:
 scoreboard players set $global humvil.id -2147483648

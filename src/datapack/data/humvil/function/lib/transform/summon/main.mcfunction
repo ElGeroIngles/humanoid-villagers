@@ -17,3 +17,6 @@ $execute at @s run summon minecraft:mannequin ~ ~ ~ {CustomNameVisible:1b,Custom
 
 # Hide or unhide the "NPC" tag:
 execute store result entity @n[tag=humvil.human.needs_config] hide_description byte 1 run scoreboard players get $npc_tag humvil.settings
+
+# Add the custom "NPC" tag:
+execute if score $custom_npc_tag humvil.settings matches 1 run data modify entity @n[tag=humvil.human.needs_config] description set from storage humvil:lib Settings.CustomTag
