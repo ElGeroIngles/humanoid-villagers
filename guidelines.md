@@ -15,7 +15,7 @@
 - To-Do:
     - Features:
         - Add missing settings to the dialog menu to customize them.
-        - Setting to make every villager of a village a Mannequin or all villagers (defaults to only villagers from villages).
+        - Setting to transform villagers from village to Humans, transform all villagers to Humans or only transform the specified entities to Humans (defaults to only villagers from villages).
         - Add support for baby villagers.
         - Setting to allow for animations in mannequins, such as double crouching when near a player or enable the swimming pose while on water (defaults to true).
     - Other:
