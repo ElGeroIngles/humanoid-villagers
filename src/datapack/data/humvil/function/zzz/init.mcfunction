@@ -43,6 +43,12 @@ scoreboard players set $npc_tag humvil.settings 1
 scoreboard players set $custom_npc_tag humvil.settings 0
 data modify storage humvil:lib Settings.CustomTag set value {translate:"entity.minecraft.mannequin.label"}
 
+# Specify which entities can be humanized:
+# 0 --> Only naturally spawning villagers & zombified villagers, once they have been cured, from structures (villages, igloo...)
+# 1 --> All villagers
+# 2 --> Only transform the specified entities (via manual tags and functions)
+scoreboard players set $can_be_humanized humvil.settings 0
+
 # Id:
 scoreboard players set $global humvil.id -2147483648
 

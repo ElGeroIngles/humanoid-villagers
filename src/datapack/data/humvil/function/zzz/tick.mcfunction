@@ -12,5 +12,12 @@ scoreboard players operation #PlayerCountPrev humvil.players.Dummy = #PlayerCoun
 # Kill the entity if the one other one is dead:
 execute as @e[tag=humvil.linked] run function humvil:zzz/link/check_kill
 
+# Humanize entities:
+# 0 --> Only naturally spawning villagers & zombified villagers, once they have been cured, from structures (villages, igloo...)
+# 1 --> All villagers
+# 2 --> Only transform the specified entities (via manual tags and functions)
+execute if score $can_be_humanized humvil.settings matches 0 as @e[tag=humvil.villager_from_village,tag=!humvil.human.transformed,tag=!smithed.entity,type=minecraft:villager] run function humvil:lib/transform/humanize_villager
+execute if score $can_be_humanized humvil.settings matches 1 as @e[tag=!humvil.human.transformed,tag=!smithed.entity,type=minecraft:villager] run function humvil:lib/transform/humanize_villager
+
 # Add the AI to the human:
 execute as @e[tag=humvil.human] run function humvil:zzz/link/ai
