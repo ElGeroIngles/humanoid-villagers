@@ -18,8 +18,11 @@
         - Setting to transform villagers from village to Humans, transform all villagers to Humans or only transform the specified entities to Humans (defaults to only villagers from villages).
         - Add support for baby villagers.
         - Setting to allow for animations in mannequins, such as double crouching when near a player or enable the swimming pose while on water (defaults to true).
+        - Setting to allow for conversations between Humans (defaults to true).
+        - Add non-binary option to the pool.
     - Other:
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
+        - Add a lot of names and skins to the pools.
 
 - Done:
     - Setting to allow to hide the outer skin layers that the user may want to hide (defaults to show everything).
