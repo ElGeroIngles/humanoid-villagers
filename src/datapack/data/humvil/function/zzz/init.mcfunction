@@ -25,6 +25,7 @@ scoreboard players set $hide_left_leg_pants humvil.settings 0
 scoreboard players set $hide_right_leg_pants humvil.settings 0
 scoreboard players set $hide_hat humvil.settings 0
 data modify storage humvil:lib Settings.HiddenLayers set value []
+scoreboard players set $previous_hidden_layers humvil.settings 0
 
 # Humans inherit equipment from its original entity:
 # 0 --> No
