@@ -16,7 +16,6 @@
     - Features:
         - Add missing settings to the dialog menu to customize them.
         - Setting to transform villagers from village to Humans, transform all villagers to Humans or only transform the specified entities to Humans (defaults to only villagers from villages).
-        - Add support for baby villagers.
         - Setting to allow for animations in mannequins, such as double crouching when near a player or enable the swimming pose while on water (defaults to true).
         - Setting to allow for conversations between Humans (defaults to true).
         - Add non-binary option to the pool.
@@ -25,6 +24,7 @@
         - Add a lot of names and skins to the pools.
 
 - Done:
+    - Add support for baby villagers.
     - Setting to allow to hide the outer skin layers that the user may want to hide (defaults to show everything).
     - Setting to customize the "NPC" tag of mannequins.
     - Setting to allow default main hand, either left, right or random, and allow customization of the percentages (defaults to random and 90% for right-handed and 10% for left-handed).

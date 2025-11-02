@@ -53,6 +53,7 @@ data modify entity @s CustomName set from entity @n[tag=humvil.human.needs_confi
 
 # Make the entity's hitbox big enough so that it covers the human at all times:
 attribute @s minecraft:scale modifier add humvil:cover_human_hitbox 0.2 add_multiplied_base
+execute if predicate humvil:flags/is_baby run attribute @n[tag=humvil.human.needs_config] minecraft:scale modifier add humvil:cover_human_hitbox_baby -0.5 add_multiplied_base
 
 # Inherit equipment to human:
 execute unless score $inherit_equipment humvil.settings matches 0 run item replace entity @n[tag=humvil.human.needs_config] armor.head from entity @s armor.head

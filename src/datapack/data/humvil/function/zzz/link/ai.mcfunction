@@ -4,6 +4,10 @@
 # Get the entity that the human is linked to (it will be "@n[tag=humvil.api.output.this_entity]"):
 function humvil:api/get/original_entity
 
+# Adjust hitbox if baby or adult:
+execute if entity @n[tag=humvil.api.output.this_entity,predicate=humvil:flags/is_baby] run attribute @s minecraft:scale modifier add humvil:cover_human_hitbox_baby -0.5 add_multiplied_base
+execute if entity @n[tag=humvil.api.output.this_entity,predicate=!humvil:flags/is_baby] run attribute @s minecraft:scale modifier remove humvil:cover_human_hitbox_baby
+
 # Copy ai:
 tp @s @n[tag=humvil.api.output.this_entity]
 execute rotated as @n[tag=humvil.api.output.this_entity] run rotate @s ~ ~
