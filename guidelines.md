@@ -23,6 +23,7 @@
         - Add a lot of names, dialogs and skins to the pools.
     - Bugs:
         - Dialogs tend do not reset properly.
+        - Dialogs run even when players can't hear them.
 
 - Done:
     - Setting to allow for conversations between Humans (defaults to true).
