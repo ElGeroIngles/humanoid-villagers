@@ -28,5 +28,8 @@ data modify entity @s hidden_layers set from storage humvil:lib Settings.HiddenL
 # Offset the human by a little bit so its hitbox is always covered:
 execute at @s rotated as @s run tp ^ ^ ^0.005
 
+# Try a conversation if possible:
+execute if score $humans_can_conversate humvil.settings matches 1 unless score @s humvil.conversations matches 1.. run function humvil:zzz/link/conversations/main
+
 # Reset:
 tag @n[tag=humvil.api.output.this_entity] remove humvil.api.output.this_entity

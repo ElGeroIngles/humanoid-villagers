@@ -12,8 +12,15 @@ scoreboard objectives add humvil.temp dummy
 
 scoreboard objectives add humvil.id dummy
 
+scoreboard objectives add humvil.conversations dummy
+scoreboard objectives add humvil.conversations.id dummy
+scoreboard objectives add humvil.conversations.wait_between_lines dummy
+
 scoreboard objectives add humvil.players.JoinGame minecraft.custom:minecraft.leave_game
 scoreboard objectives add humvil.players.Dummy dummy
+
+# Ticks:
+schedule function humvil:zzz/ticks/1s 1s replace
 
 # Initialize default config:
 execute unless score $init humvil.global matches ..0 run function humvil:zzz/init

@@ -49,8 +49,24 @@ data modify storage humvil:lib Settings.CustomTag set value {translate:"entity.m
 # 2 --> Only transform the specified entities (via manual tags and functions)
 scoreboard players set $can_be_humanized humvil.settings 0
 
+# Allow for animations in humans (such as double crouching when near a player or make them swin then in water):
+# 0 --> No
+# 1 --> Yes
+scoreboard players set $animated_humans humvil.settings 1
+
+# Allow for conversations between humans:
+# 0 --> No
+# 1 --> Yes (1.00% chance each second, with a cooldown of 30s (600 ticks) between each conversation of that villager)
+scoreboard players set $humans_can_conversate humvil.settings 1
+scoreboard players set $humans_conversate_frequency humvil.settings 1
+scoreboard players set $humans_conversate_cooldown humvil.settings 30
+
 # Id:
 scoreboard players set $global humvil.id -2147483648
+scoreboard players set $id humvil.conversations -2147483648
+
+# Set current conversations to none:
+data modify storage humvil:conversations Current set value []
 
 # Only run once per world:
 # scoreboard players set $init humvil.global 0

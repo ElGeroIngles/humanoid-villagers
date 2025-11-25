@@ -1,0 +1,45 @@
+# > humvil:zzz/link/conversations/play/main
+# @n[tag=humvil.conversation.participant.id.$(id)] --> Entity that participates in a conversation given an id
+# @n[tag=humvil.conversation.participant.$(by).this] --> Entity that participates in a conversation given its order of participants in its conversation
+# @n[tag=humvil.conversation.participant.1.this] --> Entity that stores all of the conversation's data (id, cooldowns...)
+# Macros:
+# $(id): Id of the conversation
+
+# Give id:
+$scoreboard players set @e[tag=humvil.conversation.participant] humvil.conversations.id $(id)
+
+# Change tags:
+$tag @n[tag=humvil.conversation.participant,limit=5] add humvil.conversation.participant.id.$(id)
+
+tag @n[tag=humvil.conversation.participant.1] add humvil.conversation.participant.1.this
+tag @n[tag=humvil.conversation.participant.2] add humvil.conversation.participant.2.this
+tag @n[tag=humvil.conversation.participant.3] add humvil.conversation.participant.3.this
+tag @n[tag=humvil.conversation.participant.4] add humvil.conversation.participant.4.this
+tag @n[tag=humvil.conversation.participant.5] add humvil.conversation.participant.5.this
+
+tag @n[tag=humvil.conversation.participant,limit=5] add humvil.conversation.in_conversation
+
+tag @n[tag=humvil.conversation.participant,limit=5] remove humvil.conversation.participant
+tag @n[tag=humvil.conversation.participant.1] remove humvil.conversation.participant.1
+tag @n[tag=humvil.conversation.participant.2] remove humvil.conversation.participant.2
+tag @n[tag=humvil.conversation.participant.3] remove humvil.conversation.participant.3
+tag @n[tag=humvil.conversation.participant.4] remove humvil.conversation.participant.4
+tag @n[tag=humvil.conversation.participant.5] remove humvil.conversation.participant.5
+
+# Test:
+# tellraw @a "A new play is going to be played with the following arguments:"
+# $tellraw @a ["Id: ",{score:{name:"@n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)]",objective:"humvil.conversations.id"}}]
+# $tellraw @a ["Participants: ",{selector:"@e[tag=humvil.conversation.in_conversation,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["Participant 1: ",{selector:"@n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["Participant 2: ",{selector:"@n[tag=humvil.conversation.participant.2.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["Participant 3: ",{selector:"@n[tag=humvil.conversation.participant.3.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["Participant 4: ",{selector:"@n[tag=humvil.conversation.participant.4.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["Participant 5: ",{selector:"@n[tag=humvil.conversation.participant.5.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# tellraw @a ["It will be heared by: ",{selector:"@a[tag=humvil.conversation.receptor]"}]
+
+# Play:
+execute as @a[tag=humvil.conversation.receptor] run function humvil:zzz/link/conversations/play/action with storage humvil:temp temp.play
+
+# Change tags to players:
+$tag @a[tag=humvil.conversation.receptor] add humvil.conversation.receptor.$(id)
+tag @a[tag=humvil.conversation.receptor] remove humvil.conversation.receptor
