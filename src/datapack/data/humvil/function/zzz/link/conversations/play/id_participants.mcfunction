@@ -2,6 +2,7 @@
 # @n[tag=humvil.conversation.participant.id.$(id)] --> Entity that participates in a conversation given an id
 # @n[tag=humvil.conversation.participant.$(by).this] --> Entity that participates in a conversation given its order of participants in its conversation
 # @n[tag=humvil.conversation.participant.1.this] --> Entity that stores all of the conversation's data (id, cooldowns...)
+# @n[tag=humvil.conversation.participant.in_conversation] --> Entity that participates in a conversation
 # Macros:
 # $(id): Id of the conversation
 
@@ -36,6 +37,36 @@ tag @n[tag=humvil.conversation.participant.5] remove humvil.conversation.partici
 # $tellraw @a ["Participant 4: ",{selector:"@n[tag=humvil.conversation.participant.4.this,tag=humvil.conversation.participant.id.$(id)]"}]
 # $tellraw @a ["Participant 5: ",{selector:"@n[tag=humvil.conversation.participant.5.this,tag=humvil.conversation.participant.id.$(id)]"}]
 # tellraw @a ["It will be heared by: ",{selector:"@a[tag=humvil.conversation.receptor]"}]
+
+# $tellraw @a ["Data of: ",{selector:"@n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["    Tags: ",{nbt:"Tags",entity:"@n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["    humvil.conversations.id: ",{score:{objective:"humvil.conversations.id",name:"@n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+# $tellraw @a ["    humvil.conversations: ",{score:{objective:"humvil.conversations",name:"@n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+# $tellraw @a ["    humvil.conversations.wait_between_lines: ",{score:{objective:"humvil.conversations.wait_between_lines",name:"@n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+
+# $tellraw @a ["Data of: ",{selector:"@n[tag=humvil.conversation.participant.2.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["    Tags: ",{nbt:"Tags",entity:"@n[tag=humvil.conversation.participant.2.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["    humvil.conversations.id: ",{score:{objective:"humvil.conversations.id",name:"@n[tag=humvil.conversation.participant.2.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+# $tellraw @a ["    humvil.conversations: ",{score:{objective:"humvil.conversations",name:"@n[tag=humvil.conversation.participant.2.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+# $tellraw @a ["    humvil.conversations.wait_between_lines: ",{score:{objective:"humvil.conversations.wait_between_lines",name:"@n[tag=humvil.conversation.participant.2.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+
+# $tellraw @a ["Data of: ",{selector:"@n[tag=humvil.conversation.participant.3.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["    Tags: ",{nbt:"Tags",entity:"@n[tag=humvil.conversation.participant.3.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["    humvil.conversations.id: ",{score:{objective:"humvil.conversations.id",name:"@n[tag=humvil.conversation.participant.3.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+# $tellraw @a ["    humvil.conversations: ",{score:{objective:"humvil.conversations",name:"@n[tag=humvil.conversation.participant.3.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+# $tellraw @a ["    humvil.conversations.wait_between_lines: ",{score:{objective:"humvil.conversations.wait_between_lines",name:"@n[tag=humvil.conversation.participant.3.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+
+# $tellraw @a ["Data of: ",{selector:"@n[tag=humvil.conversation.participant.4.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["    Tags: ",{nbt:"Tags",entity:"@n[tag=humvil.conversation.participant.4.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["    humvil.conversations.id: ",{score:{objective:"humvil.conversations.id",name:"@n[tag=humvil.conversation.participant.4.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+# $tellraw @a ["    humvil.conversations: ",{score:{objective:"humvil.conversations",name:"@n[tag=humvil.conversation.participant.4.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+# $tellraw @a ["    humvil.conversations.wait_between_lines: ",{score:{objective:"humvil.conversations.wait_between_lines",name:"@n[tag=humvil.conversation.participant.4.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+
+# $tellraw @a ["Data of: ",{selector:"@n[tag=humvil.conversation.participant.5.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["    Tags: ",{nbt:"Tags",entity:"@n[tag=humvil.conversation.participant.5.this,tag=humvil.conversation.participant.id.$(id)]"}]
+# $tellraw @a ["    humvil.conversations.id: ",{score:{objective:"humvil.conversations.id",name:"@n[tag=humvil.conversation.participant.5.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+# $tellraw @a ["    humvil.conversations: ",{score:{objective:"humvil.conversations",name:"@n[tag=humvil.conversation.participant.5.this,tag=humvil.conversation.participant.id.$(id)]"}}]
+# $tellraw @a ["    humvil.conversations.wait_between_lines: ",{score:{objective:"humvil.conversations.wait_between_lines",name:"@n[tag=humvil.conversation.participant.5.this,tag=humvil.conversation.participant.id.$(id)]"}}]
 
 # Play:
 execute as @a[tag=humvil.conversation.receptor] run function humvil:zzz/link/conversations/play/action with storage humvil:temp temp.play

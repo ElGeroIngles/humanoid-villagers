@@ -2,6 +2,7 @@
 # @n[tag=humvil.conversation.participant.id.$(id)] --> Entity that participates in a conversation given an id
 # @n[tag=humvil.conversation.participant.$(by).this] --> Entity that participates in a conversation given its order of participants in its conversation
 # @n[tag=humvil.conversation.participant.1.this] --> Entity that stores all of the conversation's data (id, cooldowns...)
+# @n[tag=humvil.conversation.participant.in_conversation] --> Entity that participates in a conversation
 # @s is a player who will hear the conversation
 # Play the next line of a conversation given its id
 # Macros:
@@ -42,6 +43,7 @@ scoreboard players reset @e[tag=humvil.conversation.temp.reset_this] humvil.conv
 scoreboard players reset @n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.temp.reset_this] humvil.conversations.wait_between_lines
 scoreboard players operation @n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.temp.reset_this] humvil.conversations = $humans_conversate_cooldown humvil.settings
 
+$say tag @s remove humvil.conversation.receptor.$(id)
 $tag @s remove humvil.conversation.receptor.$(id)
 
 tag @e[tag=humvil.conversation.temp.reset_this] remove humvil.conversation.in_conversation

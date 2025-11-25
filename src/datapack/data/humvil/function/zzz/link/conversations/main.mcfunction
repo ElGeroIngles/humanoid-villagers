@@ -5,6 +5,9 @@
 # Exit if on cooldown:
 execute if score @s humvil.conversations matches 1.. run return fail
 
+# Exit if no players near to hear the conversation:
+execute at @s unless entity @a[distance=..10] run return fail
+
 # Random chance:
 execute store result score $conversation_chance humvil.temp run random value 0..10000
 # execute store result score $conversation_chance humvil.temp run random value 0..1
