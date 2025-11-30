@@ -68,9 +68,11 @@ tag @n[tag=humvil.conversation.participant.5] remove humvil.conversation.partici
 # $tellraw @a ["    humvil.conversations: ",{score:{objective:"humvil.conversations",name:"@n[tag=humvil.conversation.participant.5.this,tag=humvil.conversation.participant.id.$(id)]"}}]
 # $tellraw @a ["    humvil.conversations.wait_between_lines: ",{score:{objective:"humvil.conversations.wait_between_lines",name:"@n[tag=humvil.conversation.participant.5.this,tag=humvil.conversation.participant.id.$(id)]"}}]
 
+# Add id to player:
+$scoreboard players set @a[tag=humvil.conversation.receptor] humvil.conversations.id.receptor $(id)
+
 # Play:
 execute as @a[tag=humvil.conversation.receptor] run function humvil:zzz/link/conversations/play/action with storage humvil:temp temp.play
 
 # Change tags to players:
-$tag @a[tag=humvil.conversation.receptor] add humvil.conversation.receptor.$(id)
 tag @a[tag=humvil.conversation.receptor] remove humvil.conversation.receptor

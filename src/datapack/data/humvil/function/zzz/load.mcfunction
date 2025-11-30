@@ -14,6 +14,7 @@ scoreboard objectives add humvil.id dummy
 
 scoreboard objectives add humvil.conversations dummy
 scoreboard objectives add humvil.conversations.id dummy
+scoreboard objectives add humvil.conversations.id.receptor dummy
 scoreboard objectives add humvil.conversations.wait_between_lines dummy
 
 scoreboard objectives add humvil.players.JoinGame minecraft.custom:minecraft.leave_game

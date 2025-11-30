@@ -8,6 +8,11 @@ execute if score @s humvil.conversations matches 1.. run return fail
 # Exit if no players near to hear the conversation:
 execute at @s unless entity @a[distance=..10] run return fail
 
+# Exit if no players that "could" hear the conversation:
+scoreboard players set $temp humvil.temp 0
+execute at @s as @a[distance=..10] unless score @s humvil.conversations.id.receptor matches -2147483648..2147483647 run scoreboard players add $temp humvil.temp 1
+execute if score $temp humvil.temp matches 0 run return fail
+
 # Random chance:
 execute store result score $conversation_chance humvil.temp run random value 0..10000
 # execute store result score $conversation_chance humvil.temp run random value 0..1
@@ -41,7 +46,7 @@ tag @n[tag=humvil.conversation.participant,tag=!humvil.conversation.participant.
 function humvil:lib/pool/conversation/main
 
 # Get which players will hear this conversation:
-execute at @s run tag @a[distance=..10] add humvil.conversation.receptor
+execute at @s as @a[distance=..10] unless score @s humvil.conversations.id.receptor matches -2147483648..2147483647 run tag @s add humvil.conversation.receptor
 
 # Play the conversation:
 data modify storage humvil:temp Conversation.conversation set from storage humvil:lib output

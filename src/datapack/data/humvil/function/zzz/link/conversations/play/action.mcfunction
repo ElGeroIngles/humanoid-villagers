@@ -43,8 +43,7 @@ scoreboard players reset @e[tag=humvil.conversation.temp.reset_this] humvil.conv
 scoreboard players reset @n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.temp.reset_this] humvil.conversations.wait_between_lines
 scoreboard players operation @n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.temp.reset_this] humvil.conversations = $humans_conversate_cooldown humvil.settings
 
-$say tag @s remove humvil.conversation.receptor.$(id)
-$tag @s remove humvil.conversation.receptor.$(id)
+scoreboard players reset @s humvil.conversations.id.receptor
 
 tag @e[tag=humvil.conversation.temp.reset_this] remove humvil.conversation.in_conversation
 
