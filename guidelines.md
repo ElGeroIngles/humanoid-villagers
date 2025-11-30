@@ -20,6 +20,8 @@
     - Other:
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
         - Add a lot of names, dialogs and skins to the pools.
+    - Bugs:
+        - Fix broken chances between players and random skins/names in the pool.
 
 - Done:
     - Setting to allow for conversations between Humans (defaults to true).
