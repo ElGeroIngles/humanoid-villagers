@@ -20,6 +20,8 @@ scoreboard objectives add humvil.conversations.wait_between_lines dummy
 scoreboard objectives add humvil.players.JoinGame minecraft.custom:minecraft.leave_game
 scoreboard objectives add humvil.players.Dummy dummy
 
+scoreboard objectives add humvil.open_dialog trigger
+
 # Ticks:
 schedule function humvil:zzz/ticks/1s 1s replace
 

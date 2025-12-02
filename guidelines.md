@@ -16,7 +16,6 @@
     - Features:
         - Setting to allow for animations in mannequins, such as double crouching when near a player or enable the swimming pose while on water (defaults to true).
         - Add non-binary option to the pool.
-        - Add a trigger to open the config dialog.
     - Other:
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
         - Add a lot of names, dialogs and skins to the pools.
@@ -24,6 +23,7 @@
         - Fix broken chances between players and random skins/names in the pool.
 
 - Done:
+    - Add a trigger to open the config dialog.
     - Add missing settings to the dialog menu to customize them.
     - Setting to allow for conversations between Humans (defaults to true).
     - Setting to transform naturally spawning villagers from structures (and zombified ones too once they have been cured) to Humans, transform all villagers to Humans or only transform the specified entities to Humans (defaults to only villagers from villages).
