@@ -56,12 +56,104 @@
       ]
     },
     {
+      "type": "minecraft:number_range",
+      "key": "right_handed_percentage",
+      "label": {"translate":"dialog.humvil.config.mainhand.right-handed_percentage"},
+      "initial": 90,
+      "start": 0,
+      "end": 100,
+      "step": 1,
+      "width": 512
+    },
+        {
+      "type": "minecraft:single_option",
+      "label": {"translate":"dialog.humvil.config.humanized_entities.name"},
+      "key": "can_be_humanized",
+      "label_visible": true,
+      "width": 500,
+      "options": [
+        {
+          "id": "0",
+          "display": {"translate":"dialog.humvil.config.humanized_entities.option.1"}
+        },
+        {
+          "id": "1",
+          "display": {"translate":"dialog.humvil.config.humanized_entities.option.2"},
+          "initial": true
+        },
+        {
+          "id": "2",
+          "display": {"translate":"dialog.humvil.config.humanized_entities.option.3"}
+        }
+      ]
+    },
+    {
       "type": "minecraft:boolean",
       "key": "inherit_equipment",
       "initial": true,
       "label": {"translate":"dialog.humvil.config.equipment.name"},
       "on_false": "0",
       "on_true": "1"
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "allow_npc_tag",
+      "initial": true,
+      "label": {"translate":"dialog.humvil.config.npc.allow_tag"},
+      "on_false": "0",
+      "on_true": "1"
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "allow_npc_tag_custom",
+      "initial": false,
+      "label": {"translate":"dialog.humvil.config.npc.allow_custom_tag"},
+      "on_false": "0",
+      "on_true": "1"
+    },
+    {
+      "type": "minecraft:text",
+      "key": "npc_tag_custom",
+      "label": {"translate":"dialog.humvil.config.npc.customize"},
+      "initial": "{translate:'entity.minecraft.mannequin.label'}",
+      "max_length": 256,
+      "width": 512
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "allow_animations",
+      "initial": true,
+      "label": {"translate":"dialog.humvil.config.animations.name"},
+      "on_false": "0",
+      "on_true": "1"
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "allow_conversations",
+      "initial": true,
+      "label": {"translate":"dialog.humvil.config.conversations.allow"},
+      "on_false": "0",
+      "on_true": "1"
+    },
+    {
+      "type": "minecraft:number_range",
+      "key": "conversations_frequency",
+      "label": {"translate":"dialog.humvil.config.conversations.frequency"},
+      "initial": 1,
+      "start": 0,
+      "end": 10000,
+      "step": 1,
+      "width": 512
+    },
+    {
+      "type": "minecraft:number_range",
+      "key": "conversations_cooldown",
+      "label": {"translate":"dialog.humvil.config.conversations.cooldown"},
+      "initial": 30,
+      "start": 0,
+      "end": 3600,
+      "step": 1,
+      "width": 512
     },
     {
       "type": "minecraft:boolean",
@@ -135,7 +227,7 @@
     },
     "action": {
       "type": "minecraft:dynamic/run_command",
-      "template": "/function humvil:lib/settings/main {human_pool:$(human_pool),main_hand:$(main_hand),inherit_equipment:$(inherit_equipment),hide_cape:$(hide_cape),hide_jacket:$(hide_jacket),hide_left_sleeve:$(hide_left_sleeve),hide_right_sleeve:$(hide_right_sleeve),hide_left_leg_pants:$(hide_left_leg_pants),hide_right_leg_pants:$(hide_right_leg_pants),hide_hat:$(hide_hat)}"
+      "template": "/function humvil:lib/settings/main {human_pool:$(human_pool),main_hand:$(main_hand),inherit_equipment:$(inherit_equipment),hide_cape:$(hide_cape),hide_jacket:$(hide_jacket),hide_left_sleeve:$(hide_left_sleeve),hide_right_sleeve:$(hide_right_sleeve),hide_left_leg_pants:$(hide_left_leg_pants),hide_right_leg_pants:$(hide_right_leg_pants),hide_hat:$(hide_hat),allow_npc_tag:$(allow_npc_tag),allow_animations:$(allow_animations),allow_conversations:$(allow_conversations),right_handed_percentage:$(right_handed_percentage),conversations_frequency:$(conversations_frequency),conversations_cooldown:$(conversations_cooldown),can_be_humanized:$(can_be_humanized),npc_tag_custom:'$(npc_tag_custom)',allow_npc_tag_custom:$(allow_npc_tag_custom)}"
     }
   }
 }

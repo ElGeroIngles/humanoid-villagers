@@ -19,10 +19,11 @@
 $scoreboard players set $human_pool humvil.settings $(human_pool)
 
 # The main hand for the humans will be:
-# 0 --> Random
+# 0 --> Random (90% for right-handed and 10% for left-handed)
 # 1 --> Always right-handed
 # 2 --> Always left-handed
 $scoreboard players set $main_hand humvil.settings $(main_hand)
+$scoreboard players set $right-handed_percentage humvil.settings $(right_handed_percentage)
 
 # External layers to hide:
 # 0 --> Don't hide that layer
@@ -39,3 +40,32 @@ $scoreboard players set $hide_hat humvil.settings $(hide_hat)
 # 0 --> No
 # 1 --> Yes
 $scoreboard players set $inherit_equipment humvil.settings $(inherit_equipment)
+
+# Hide the "NPC" tag below the mannequin's name:
+# 0 --> No
+# 1 --> Yes
+$scoreboard players set $npc_tag humvil.settings $(allow_npc_tag)
+
+# Override the "NPC" tag below the mannequin's name:
+# 0 --> No
+# 1 --> Yes
+$scoreboard players set $custom_npc_tag humvil.settings $(allow_npc_tag_custom)
+$data modify storage humvil:lib Settings.CustomTag set value $(npc_tag_custom)
+
+# Specify which entities can be humanized:
+# 0 --> Only naturally spawning villagers & zombified villagers, once they have been cured, from structures (villages, igloo...)
+# 1 --> All villagers
+# 2 --> Only transform the specified entities (via manual tags and functions)
+$scoreboard players set $can_be_humanized humvil.settings $(can_be_humanized)
+
+# Allow for animations in humans (such as double crouching when near a player or make them swin then in water):
+# 0 --> No
+# 1 --> Yes
+$scoreboard players set $animated_humans humvil.settings $(allow_animations)
+
+# Allow for conversations between humans:
+# 0 --> No
+# 1 --> Yes (0.01% chance each tick, with a cooldown of 30s (600 ticks) between each conversation of that villager)
+$scoreboard players set $humans_can_conversate humvil.settings $(allow_conversations)
+$scoreboard players set $humans_conversate_frequency humvil.settings $(conversations_frequency)
+$scoreboard players set $humans_conversate_cooldown humvil.settings $(conversations_cooldown)

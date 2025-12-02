@@ -47,7 +47,7 @@ data modify storage humvil:lib Settings.CustomTag set value {translate:"entity.m
 # 0 --> Only naturally spawning villagers & zombified villagers, once they have been cured, from structures (villages, igloo...)
 # 1 --> All villagers
 # 2 --> Only transform the specified entities (via manual tags and functions)
-scoreboard players set $can_be_humanized humvil.settings 0
+scoreboard players set $can_be_humanized humvil.settings 1
 
 # Allow for animations in humans (such as double crouching when near a player or make them swin then in water):
 # 0 --> No
@@ -56,7 +56,7 @@ scoreboard players set $animated_humans humvil.settings 1
 
 # Allow for conversations between humans:
 # 0 --> No
-# 1 --> Yes (1.00% chance each second, with a cooldown of 30s (600 ticks) between each conversation of that villager)
+# 1 --> Yes (0.01% chance each tick, with a cooldown of 30s (600 ticks) between each conversation of that villager)
 scoreboard players set $humans_can_conversate humvil.settings 1
 scoreboard players set $humans_conversate_frequency humvil.settings 1
 scoreboard players set $humans_conversate_cooldown humvil.settings 30

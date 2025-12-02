@@ -27,8 +27,24 @@
     "dialog.humvil.config.mainhand.options.1": "Random.",
     "dialog.humvil.config.mainhand.options.2": "Always right-handed.",
     "dialog.humvil.config.mainhand.options.3": "Always left-handed.",
+    "dialog.humvil.config.mainhand.right-handed_percentage": "If \"Random\" selected, percentage for the Human to be right-handed (rest for left-handed)",
     
     "dialog.humvil.config.equipment.name": "Humans inherit equipment from its original entity.",
+    
+    "dialog.humvil.config.npc.allow_tag": "Hide the \"NPC\" tag above Humans.",
+    "dialog.humvil.config.npc.allow_custom_tag": "Override the \"NPC\" tag below the mannequin's name.",
+    "dialog.humvil.config.npc.customize": "Customize the \"NPC\" tag above Humans:",
+
+    "dialog.humvil.config.animations.name": "Allow for animations in Humans (Swimming while on water, double-crouching while near players...).",
+    
+    "dialog.humvil.config.conversations.allow": "Allow for conversations between Humans and Players.",
+    "dialog.humvil.config.conversations.frequency": "Chance per tick for a Human to start a conversation (1 = 0.01%%)",
+    "dialog.humvil.config.conversations.cooldown": "Cooldown between each conversation (in seconds)",
+
+    "dialog.humvil.config.humanized_entities.name": "Specify which entities can be humanized",
+    "dialog.humvil.config.humanized_entities.option.1": "Only naturally spawning villagers & zombified villagers, once they have been cured, from structures (villages, igloo...).",
+    "dialog.humvil.config.humanized_entities.option.2": "All villagers.",
+    "dialog.humvil.config.humanized_entities.option.3": "Only transform the specified entities (via manual tags and functions).",
 
     "dialog.humvil.config.save": "Save and Exit",
 

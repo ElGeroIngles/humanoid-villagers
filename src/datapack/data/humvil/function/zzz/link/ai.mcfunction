@@ -12,6 +12,11 @@ execute if entity @n[tag=humvil.api.output.this_entity,predicate=!humvil:flags/i
 tp @s @n[tag=humvil.api.output.this_entity]
 execute rotated as @n[tag=humvil.api.output.this_entity] run rotate @s ~ ~
 
+# Animations:
+execute if score $animated_humans humvil.settings matches 0 unless data entity @s {pose:"sleeping"} unless data entity @s {pose:"standing"} run data modify entity @s pose set value "standing"
+execute unless score $animated_humans humvil.settings matches 0 run function humvil:zzz/link/animations/main
+
+# Set sleeping pose:
 execute if data entity @n[tag=humvil.api.output.this_entity] sleeping_pos unless data entity @s {pose:"sleeping"} run data modify entity @s pose set value "sleeping"
 execute if data entity @s {pose:"sleeping"} unless data entity @n[tag=humvil.api.output.this_entity] sleeping_pos run data modify entity @s pose set value "standing"
 
