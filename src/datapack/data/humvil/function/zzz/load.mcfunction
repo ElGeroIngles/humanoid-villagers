@@ -22,6 +22,9 @@ scoreboard objectives add humvil.players.Dummy dummy
 
 scoreboard objectives add humvil.open_dialog trigger
 
+scoreboard objectives add humvil.animations.double_crouching dummy
+scoreboard objectives add humvil.animations.falling dummy
+
 # Ticks:
 schedule function humvil:zzz/ticks/1s 1s replace
 

@@ -14,7 +14,6 @@
 
 - To-Do:
     - Features:
-        - Setting to allow for animations in mannequins, such as double crouching when near a player or enable the swimming pose while on water (defaults to true).
         - Add non-binary option to the pool.
     - Other:
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
@@ -23,6 +22,7 @@
         - Fix broken chances between players and random skins/names in the pool.
 
 - Done:
+    - Setting to allow for animations in mannequins, such as double crouching when near a player or enable the swimming pose while on water (defaults to true).
     - Add a trigger to open the config dialog.
     - Add missing settings to the dialog menu to customize them.
     - Setting to allow for conversations between Humans (defaults to true).
