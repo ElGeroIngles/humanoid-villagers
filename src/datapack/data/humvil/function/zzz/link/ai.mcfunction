@@ -13,7 +13,7 @@ tp @s @n[tag=humvil.api.output.this_entity]
 execute rotated as @n[tag=humvil.api.output.this_entity] run rotate @s ~ ~
 
 # Animations:
-execute if score $animated_humans humvil.settings matches 0 unless data entity @s {pose:"sleeping"} unless data entity @s {pose:"standing"} run data modify entity @s pose set value "standing"
+data modify entity @s pose set value "standing"
 execute unless score $animated_humans humvil.settings matches 0 run function humvil:zzz/link/animations/main
 
 execute if score @s humvil.animations.double_crouching matches 1.. run function humvil:zzz/link/animations/double_crouching/control

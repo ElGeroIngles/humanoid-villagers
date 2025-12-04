@@ -11,10 +11,7 @@ execute if predicate humvil:flags/is_on_fuild run data modify entity @s pose set
 execute unless predicate humvil:flags/is_on_fuild if data entity @s {pose:"swimming"} run data modify entity @s pose set value "standing"
 
 # Falling animations:
-execute as @n[tag=humvil.api.output.this_entity] if predicate humvil:flags/is_on_ground unless score @n[tag=humvil.temp.this_entity_animation] humvil.animations.falling matches 0 run data modify entity @n[tag=humvil.temp.this_entity_animation] pose set value "standing"
-execute as @n[tag=humvil.api.output.this_entity] if predicate humvil:flags/is_on_ground unless score @n[tag=humvil.temp.this_entity_animation] humvil.animations.falling matches 0 run scoreboard players set @n[tag=humvil.temp.this_entity_animation] humvil.animations.falling 0
-execute as @n[tag=humvil.api.output.this_entity] unless predicate humvil:flags/is_on_ground run scoreboard players add @n[tag=humvil.temp.this_entity_animation] humvil.animations.falling 1
-execute if score @s humvil.animations.falling matches 20.. run data modify entity @s pose set value "fall_flying"
+execute as @n[tag=humvil.api.output.this_entity] at @s if predicate humvil:animations/fall run data modify entity @n[tag=humvil.temp.this_entity_animation] pose set value "fall_flying"
 
 # Reset:
 tag @s remove humvil.temp.this_entity_animation
