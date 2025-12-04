@@ -19,8 +19,11 @@ execute unless score $animated_humans humvil.settings matches 0 run function hum
 execute if score @s humvil.animations.double_crouching matches 1.. run function humvil:zzz/link/animations/double_crouching/control
 
 # Set sleeping pose:
+execute if data entity @n[tag=humvil.api.output.this_entity] sleeping_pos unless data entity @s {pose:"sleeping"} run data modify entity @s sleeping_pos set from entity @n[tag=humvil.api.output.this_entity] sleeping_pos
 execute if data entity @n[tag=humvil.api.output.this_entity] sleeping_pos unless data entity @s {pose:"sleeping"} run data modify entity @s pose set value "sleeping"
+execute if data entity @s {pose:"sleeping"} unless data entity @n[tag=humvil.api.output.this_entity] sleeping_pos run data remove entity @s sleeping_pos
 execute if data entity @s {pose:"sleeping"} unless data entity @n[tag=humvil.api.output.this_entity] sleeping_pos run data modify entity @s pose set value "standing"
+execute unless data entity @s {pose:"sleeping"} run tag @s remove humvil.human.sleeping_adjusted
 
 # Adjust the "NPC" tag below the mannequin's name in case it changed:
 execute if score $npc_tag humvil.settings matches 1 unless data entity @s hide_description run data modify entity @s hide_description set value 1b
