@@ -19,9 +19,10 @@
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
         - Add a lot of names, dialogs and skins to the pools.
     - Bugs:
-        - Very bad performance when near a lot of humans.
+        - Fix villagers hitbox, you can't place blocks on top of them.
 
 - Done:
+    - Very bad performance when near a lot of humans.
     - Fix broken chances between players and random skins/names in the pool.
     - Fix broken bed animation.
     - New animation for when humans are in-doors while at night (crouching, so like hiding).
