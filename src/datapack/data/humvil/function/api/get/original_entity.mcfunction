@@ -5,5 +5,6 @@
 
 # Get entity:
 tag @s add humvil.temp
-execute as @e[tag=humvil.human.transformed,tag=!humvil.temp] if score @s humvil.id = @n[tag=humvil.temp] humvil.id run tag @s add humvil.api.output.this_entity
+scoreboard players operation $id humvil.id = @s humvil.id
+tag @e[tag=humvil.linked,tag=!humvil.temp,type=#humvil:human,predicate=humvil:lib/check_id] add humvil.api.output.this_entity
 tag @s remove humvil.temp

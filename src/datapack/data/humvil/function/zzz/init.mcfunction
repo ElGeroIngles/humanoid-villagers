@@ -62,11 +62,13 @@ scoreboard players set $humans_conversate_frequency humvil.settings 1
 scoreboard players set $humans_conversate_cooldown humvil.settings 30
 
 # Id:
-scoreboard players set $global humvil.id -2147483648
+scoreboard players set $global humvil.id -16000
+#scoreboard players set $global humvil.id -2147483648
 scoreboard players set $id humvil.conversations -2147483648
 
 # Set current conversations to none:
 data modify storage humvil:conversations Current set value []
+scoreboard players reset @a humvil.conversations.id.receptor
 
 # Only run once per world:
 # scoreboard players set $init humvil.global 0

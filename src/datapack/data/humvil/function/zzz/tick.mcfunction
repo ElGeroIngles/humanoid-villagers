@@ -1,3 +1,6 @@
+# Fix global id if needed:
+execute unless score $global humvil.id matches -16000..16000 run scoreboard players set $global humvil.id -16000
+
 # Update the hidden layers array if needed:
 function humvil:lib/settings/update_hidden_layers
 
