@@ -25,13 +25,14 @@ data modify storage humvil:random mannequin.name set from storage humvil:lib out
 
 # Get the properties for the mannequin (male, female, right-handed, name, skin...):
 # If selected "Players that have joined this world and random ones", then randomize between the players and the random ones
-execute if score $human_pool humvil.settings matches ..0 store result score $human_pool humvil.temp run random value 0..1
+execute if score $human_pool humvil.settings matches ..0 run function humvil:lib/transform/summon/player_and_randoms
+#execute if score $human_pool humvil.settings matches ..0 store result score $human_pool humvil.temp run random value 0..1
 
 execute if score $human_pool humvil.settings matches 1 run function humvil:lib/transform/summon/player
-execute if score $human_pool humvil.settings matches ..0 if score $human_pool humvil.temp matches 0 run function humvil:lib/transform/summon/player
+#execute if score $human_pool humvil.settings matches ..0 if score $human_pool humvil.temp matches 0 run function humvil:lib/transform/summon/player
 
 execute if score $human_pool humvil.settings matches 2.. run function humvil:lib/transform/summon/get_properties
-execute if score $human_pool humvil.settings matches ..0 if score $human_pool humvil.temp matches 1 run function humvil:lib/transform/summon/get_properties
+#execute if score $human_pool humvil.settings matches ..0 if score $human_pool humvil.temp matches 1 run function humvil:lib/transform/summon/get_properties
 
 # Summon:
 function humvil:lib/transform/summon/main with storage humvil:random mannequin

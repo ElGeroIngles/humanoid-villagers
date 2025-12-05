@@ -23,5 +23,5 @@ execute store result score $len humvil.temp run data get storage humvil:pool ski
 execute store result storage humvil:temp macro.index int 1 run scoreboard players remove $len humvil.temp 1
 data modify storage humvil:temp macro.array set value "humvil:pool skins"
 
-# Get a random name:
+# Get a random skin:
 function humvil:lib/pool/random/main with storage humvil:temp macro

@@ -19,9 +19,10 @@
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
         - Add a lot of names, dialogs and skins to the pools.
     - Bugs:
-        - Fix broken chances between players and random skins/names in the pool.
+        - Very bad performance when near a lot of humans.
 
 - Done:
+    - Fix broken chances between players and random skins/names in the pool.
     - Fix broken bed animation.
     - New animation for when humans are in-doors while at night (crouching, so like hiding).
     - Setting to allow for animations in mannequins, such as double crouching when near a player or enable the swimming pose while on water (defaults to true).
