@@ -23,6 +23,6 @@ function humvil:lib/pool/random/main with storage humvil:temp macro
 
 # If a player was selected, format the response:
 execute if data storage humvil:lib output.Name run function humvil:lib/transform/summon/format_name with storage humvil:lib output
-say abc
+
 # If a random one was selected, format the response:
 #execute unless data storage humvil:lib output.Name run function humvil:lib/transform/summon/get_properties
