@@ -14,6 +14,7 @@
 
 - To-Do:
     - Features:
+        - Recicle ids when humans die (if the id of the human who died is $global-1, then set $global to that id).
         - Add non-binary option to the pool.
     - Other:
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
