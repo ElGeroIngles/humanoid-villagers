@@ -14,15 +14,17 @@
 
 - To-Do:
     - Features:
-        - Recicle ids when humans die (if the id of the human who died is $global-1, then set $global to that id).
         - Add non-binary option to the pool.
     - Other:
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
         - Add a lot of names, dialogs and skins to the pools.
     - Bugs:
         - Fix villagers hitbox, you can't place blocks on top of them.
+        - Sometimes a dialog is spammed in chat with no participat.
+        - When you hurt the villager, it's human doesn't become red (it doesn't seems as the player hit it).
 
 - Done:
+    - Recicle ids when humans die (if the id of the human who died is $global-1, then set $global to that id).
     - Very bad performance when near a lot of humans.
     - Fix broken chances between players and random skins/names in the pool.
     - Fix broken bed animation.
