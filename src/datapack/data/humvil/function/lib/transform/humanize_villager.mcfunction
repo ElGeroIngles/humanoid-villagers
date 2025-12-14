@@ -76,6 +76,10 @@ execute unless score $inherit_equipment humvil.settings matches 0 run item repla
 execute unless score $inherit_equipment humvil.settings matches 0 run item replace entity @s weapon.mainhand with minecraft:air
 execute unless score $inherit_equipment humvil.settings matches 0 run item replace entity @s weapon.offhand with minecraft:air
 
+# Set scores:
+execute store result score @s humvil.health run data get entity @s Health 100
+scoreboard players operation @s humvil.health_check = @s humvil.health
+
 # Set tags:
 tag @s add humvil.human.transformed
 tag @s add humvil.linked

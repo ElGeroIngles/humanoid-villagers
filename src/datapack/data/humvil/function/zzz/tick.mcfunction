@@ -31,6 +31,9 @@ execute as @e[scores={humvil.conversations.id=-2147483648..2147483647},tag=humvi
 # Reset receptor id scoreboard if no dialogs are running to take into account for players disconecting mid-dialog:
 execute unless entity @e[tag=humvil.conversation.in_conversation] run scoreboard players reset @a humvil.conversations.id.receptor
 
+# Damage mannequin when its linked entity is hurt so the mannequin also shows as red:
+execute as @e[tag=humvil.human.transformed] run function humvil:zzz/link/damage
+
 # Open dialog if triggered:
 scoreboard players enable @a humvil.open_dialog
 dialog show @a[scores={humvil.open_dialog=1..}] humvil:about

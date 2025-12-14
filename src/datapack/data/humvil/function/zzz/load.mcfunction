@@ -25,6 +25,9 @@ scoreboard objectives add humvil.open_dialog trigger
 scoreboard objectives add humvil.animations.double_crouching dummy
 scoreboard objectives add humvil.animations.in_doors dummy
 
+scoreboard objectives add humvil.health dummy
+scoreboard objectives add humvil.health_check dummy
+
 # Ticks:
 schedule function humvil:zzz/ticks/1s 1s replace
 
