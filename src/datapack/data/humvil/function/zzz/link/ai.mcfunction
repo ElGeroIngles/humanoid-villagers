@@ -13,6 +13,7 @@ execute at @s if entity @p[distance=..50] run tag @s add humvil.player_somewhat_
 # Adjust hitbox if baby or adult:
 execute if entity @s[tag=humvil.player_nearby] if entity @n[tag=humvil.api.output.this_entity,predicate=humvil:flags/is_baby] run attribute @s minecraft:scale modifier add humvil:cover_human_hitbox_baby -0.5 add_multiplied_base
 execute if entity @s[tag=humvil.player_nearby] if entity @n[tag=humvil.api.output.this_entity,predicate=!humvil:flags/is_baby] run attribute @s minecraft:scale modifier remove humvil:cover_human_hitbox_baby
+execute if entity @s[tag=humvil.player_nearby] if entity @n[tag=humvil.api.output.this_entity,predicate=!humvil:flags/is_baby] run attribute @s minecraft:scale modifier add humvil:cover_human_hitbox 0.025641 add_multiplied_base
 
 # Copy ai:
 tp @s @n[tag=humvil.api.output.this_entity]
@@ -42,7 +43,8 @@ execute if entity @s[tag=humvil.player_nearby] if score $npc_tag humvil.settings
 execute if entity @s[tag=humvil.player_nearby] run data modify entity @s hidden_layers set from storage humvil:lib Settings.HiddenLayers
 
 # Offset the human by a little bit so its hitbox is always covered:
-execute at @s rotated as @s run tp ^ ^ ^0.005
+execute if entity @s[tag=humvil.player_nearby] at @s rotated as @s run tp ^ ^ ^0.00001
+execute if entity @s[tag=humvil.player_nearby] at @s facing entity @p eyes run tp ^ ^ ^-0.01
 
 # Try a conversation if possible:
 execute if score $humans_can_conversate humvil.settings matches 1 unless score @s humvil.conversations matches 1.. run function humvil:zzz/link/conversations/main
