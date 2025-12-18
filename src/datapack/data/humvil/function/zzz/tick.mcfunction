@@ -26,7 +26,7 @@ execute if score $can_be_humanized humvil.settings matches 1 as @e[tag=!humvil.h
 execute as @e[tag=humvil.human] run function humvil:zzz/link/ai
 
 # Play following line of the conversation after little cooldown:
-execute as @e[scores={humvil.conversations.id=-2147483648..2147483647},tag=humvil.conversation.participant.1.this] run function humvil:zzz/link/conversations/play/cooldown/main
+execute if data storage humvil:conversations Current[0] as @e[scores={humvil.conversations.id=-2147483648..2147483647},tag=humvil.conversation.participant.1.this] run function humvil:zzz/link/conversations/play/cooldown/main
 
 # Reset receptor id scoreboard if no dialogs are running to take into account for players disconecting mid-dialog:
 execute unless entity @e[tag=humvil.conversation.in_conversation] run scoreboard players reset @a humvil.conversations.id.receptor

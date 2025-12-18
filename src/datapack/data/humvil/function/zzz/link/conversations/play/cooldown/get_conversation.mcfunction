@@ -3,6 +3,9 @@
 # Macros:
 # $(id): Id of the conversation
 
+# Test:
+#tellraw @a "humvil:zzz/link/conversations/play/cooldown/get_conversation"
+
 # Get conversation:
 $data modify storage humvil:temp ThisConversation set from storage humvil:conversations Current[{id:$(id)}]
 

@@ -1,6 +1,9 @@
 # > humvil:zzz/link/conversations/main & Anywhere
 # Play a given conversation
 
+# Test:
+#tellraw @a "humvil:zzz/link/conversations/play/main"
+
 # Add it to the list of ongoing conversations:
 data modify storage humvil:temp temp.play.conversation set from storage humvil:temp Conversation.conversation
 execute store result storage humvil:temp temp.play.id int 1 run scoreboard players get $id humvil.conversations

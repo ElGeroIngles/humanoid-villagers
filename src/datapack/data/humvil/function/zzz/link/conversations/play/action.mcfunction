@@ -11,12 +11,13 @@
 # $(by): Number of the participant who will say the line
 
 # Test:
+#tellraw @a "humvil:zzz/link/conversations/play/action"
 # $say $(id)
 # $say $(next)
 # $say $(by)
 
-# Say next line:
-$tellraw @s ["<",{selector:"@n[tag=humvil.conversation.participant.$(by).this,tag=humvil.conversation.participant.id.$(id)]"},"> ",$(next)]
+# Say next line if participant 1 exists (need to check for this to prevent a bug):
+$execute if entity @n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)] run tellraw @s ["<",{selector:"@n[tag=humvil.conversation.participant.$(by).this,tag=humvil.conversation.participant.id.$(id)]"},"> ",$(next)]
 
 # Get conversation:
 $data modify storage humvil:temp CurrentConversation set from storage humvil:conversations Current[{id:$(id)}]
@@ -34,7 +35,7 @@ execute store result score $len humvil.temp run data get storage humvil:temp Cur
 
 # If it has more lines of dialog, add cooldown for the next lines:
 $execute if score $len humvil.temp matches 1.. store result score @n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)] humvil.conversations.wait_between_lines run random value 15..35
-execute if score $len humvil.temp matches 1.. run return fail
+$execute if entity @n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)] if score $len humvil.temp matches 1.. run return fail
 
 # If not, reset conversation:
 $tag @e[tag=humvil.conversation.participant.id.$(id)] add humvil.conversation.temp.reset_this

@@ -1,12 +1,10 @@
 # > humvil:zzz/link/ai
 # @s is a human linked to an entity
 # Try to do a conversation
-
-# Exit if on cooldown:
-execute if score @s humvil.conversations matches 1.. run return fail
+#tellraw @a "humvil:zzz/link/conversations/main"
 
 # Exit if no players near to hear the conversation:
-execute at @s unless entity @a[distance=..10] run return fail
+execute at @s unless entity @p[distance=..10] run return fail
 
 # Exit if no players that "could" hear the conversation:
 scoreboard players set $temp humvil.temp 0
