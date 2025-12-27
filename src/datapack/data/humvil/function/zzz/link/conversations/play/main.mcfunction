@@ -3,6 +3,7 @@
 
 # Test:
 #tellraw @a "humvil:zzz/link/conversations/play/main"
+#tellraw @a ["",{color:"aqua",text:"Hello, I'm: "},{color:"blue",selector:"@s"},"\n",{color:"aqua",text:"My tags are: "},{color:"blue",nbt:"Tags",entity:"@s"}]
 
 # Add it to the list of ongoing conversations:
 data modify storage humvil:temp temp.play.conversation set from storage humvil:temp Conversation.conversation

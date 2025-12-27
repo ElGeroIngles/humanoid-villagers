@@ -29,6 +29,9 @@ execute if score $possible_conversators humvil.conversations matches ..0 run ret
 execute store result storage humvil:temp Conversation.n_of_participants int 1 run scoreboard players get $possible_conversators humvil.conversations
 function humvil:zzz/link/conversations/n_of_participants with storage humvil:temp Conversation
 
+# Exit if no participants can conversate:
+execute if score $n_of_conversators humvil.conversations matches ..0 run return fail
+
 # Get which entities will participate:
 execute store result storage humvil:temp Conversation.participants int 1 run scoreboard players get $n_of_conversators humvil.conversations
 function humvil:zzz/link/conversations/get_participants with storage humvil:temp Conversation

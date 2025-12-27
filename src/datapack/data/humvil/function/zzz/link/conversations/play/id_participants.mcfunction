@@ -8,9 +8,12 @@
 
 # Test:
 #tellraw @a "humvil:zzz/link/conversations/play/id_participants"
+#$tellraw @a "$(id)"
+#say @s
+#tellraw @a ["",{color:"light_purple",nbt:"temp.play",storage:"humvil:temp"}]
 
 # Give id:
-$scoreboard players set @e[tag=humvil.conversation.participant] humvil.conversations.id $(id)
+scoreboard players operation @e[tag=humvil.conversation.participant] humvil.conversations.id = $id humvil.conversations
 
 # Change tags:
 $tag @n[tag=humvil.conversation.participant,limit=5] add humvil.conversation.participant.id.$(id)
@@ -24,15 +27,15 @@ tag @n[tag=humvil.conversation.participant.5] add humvil.conversation.participan
 tag @n[tag=humvil.conversation.participant,limit=5] add humvil.conversation.in_conversation
 
 tag @n[tag=humvil.conversation.participant,limit=5] remove humvil.conversation.participant
-tag @n[tag=humvil.conversation.participant.1] remove humvil.conversation.participant.1
-tag @n[tag=humvil.conversation.participant.2] remove humvil.conversation.participant.2
-tag @n[tag=humvil.conversation.participant.3] remove humvil.conversation.participant.3
-tag @n[tag=humvil.conversation.participant.4] remove humvil.conversation.participant.4
-tag @n[tag=humvil.conversation.participant.5] remove humvil.conversation.participant.5
+tag @e remove humvil.conversation.participant.1
+tag @e remove humvil.conversation.participant.2
+tag @e remove humvil.conversation.participant.3
+tag @e remove humvil.conversation.participant.4
+tag @e remove humvil.conversation.participant.5
 
 # Test:
 #tellraw @a "A new play is going to be played with the following arguments:"
-#$tellraw @a ["Id: ",{score:{name:"@n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)]",objective:"humvil.conversations.id"}}]
+#tellraw @a ["Id: ",{score:{name:"$id",objective:"humvil.conversations.id"}}]
 #$tellraw @a ["Participants: ",{selector:"@e[tag=humvil.conversation.in_conversation,tag=humvil.conversation.participant.id.$(id)]"}]
 #$tellraw @a ["Participant 1: ",{selector:"@n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)]"}]
 #$tellraw @a ["Participant 2: ",{selector:"@n[tag=humvil.conversation.participant.2.this,tag=humvil.conversation.participant.id.$(id)]"}]

@@ -19,9 +19,9 @@
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
         - Add a lot of names, dialogs and skins to the pools.
     - Bugs:
-        - Sometimes some dialogs are spammed without any cooldown (most likely needs a rewrite of the system).
 
 - Done:
+    - Sometimes some dialogs are spammed without any cooldown (most likely needs a rewrite of the system).
     - Sometimes a dialog is spammed in chat with no participat.
     - Fix villagers hitbox, you can't place blocks on top of them.
     - When you hurt the villager, it's human doesn't become red (it doesn't seems as the player hit it) (run an effect as the victim).

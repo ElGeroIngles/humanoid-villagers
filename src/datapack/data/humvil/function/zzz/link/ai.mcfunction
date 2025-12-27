@@ -47,7 +47,7 @@ execute if entity @s[tag=humvil.player_nearby] at @s rotated as @s run tp ^ ^ ^0
 execute if entity @s[tag=humvil.player_nearby] at @s facing entity @p eyes run tp ^ ^ ^-0.01
 
 # Try a conversation if possible:
-execute if score $humans_can_conversate humvil.settings matches 1 unless score @s humvil.conversations matches 1.. run function humvil:zzz/link/conversations/main
+execute if entity @s[tag=!humvil.conversation.in_conversation,tag=!humvil.conversation.participant.1] if score $humans_can_conversate humvil.settings matches 1 unless score @s humvil.conversations matches 1.. run function humvil:zzz/link/conversations/main
 
 # Reset:
 tag @s remove humvil.player_nearby
