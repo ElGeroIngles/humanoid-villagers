@@ -16,8 +16,14 @@
 # $say $(next)
 # $say $(by)
 
+# Give participants a tag in order to use for the conversation:
+$tag @e[tag=humvil.conversation.participant.id.$(id)] add humvil.conversation.api.participant
+
 # Say next line if participant 1 exists (need to check for this to prevent a bug):
 $execute if entity @n[tag=humvil.conversation.participant.1.this,tag=humvil.conversation.participant.id.$(id)] run tellraw @s ["<",{selector:"@n[tag=humvil.conversation.participant.$(by).this,tag=humvil.conversation.participant.id.$(id)]"},"> ",$(next)]
+
+# Remove the previous tag:
+tag @e[tag=humvil.conversation.api.participant] remove humvil.conversation.api.participant
 
 # Get conversation:
 $data modify storage humvil:temp CurrentConversation set from storage humvil:conversations Current[{id:$(id)}]

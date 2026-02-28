@@ -15,12 +15,13 @@
 - To-Do:
     - Features:
         - Add non-binary option to the pool.
+        - Indicate the office of the villager.
     - Other:
         - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
-        - Add a lot of names, dialogs and skins to the pools.
     - Bugs:
 
 - Done:
+    - Add a lot of names, dialogs and skins to the pools.
     - Sometimes some dialogs are spammed without any cooldown (most likely needs a rewrite of the system).
     - Sometimes a dialog is spammed in chat with no participat.
     - Fix villagers hitbox, you can't place blocks on top of them.
