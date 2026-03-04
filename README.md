@@ -1,8 +1,9 @@
 # Humanoid Villagers
 This datapack aims to replace the boring villagers found in villages and replace them with the new Mannequin entity with randomized names and skins which can be easily expanded on!
 
-> [!NOTE]  
-> This proyect is still VERY in early development so everything here is very experimental and way not work, but it has been open sourced in order to show everyone the new things this new entity has to offer and more.
+> [!WARNING]  
+> This repository is the one we use to make the **Humanoid Villagers** datapack, everything here is experimental.
+> Please, check out its [Modrinth page](https://modrinth.com/project/fnQXn8fK) and its [other repository](https://github.com/Eclipse-Studios/humanoid_villagers) for the full version.
 
 # Usage
 ```mcfunction
