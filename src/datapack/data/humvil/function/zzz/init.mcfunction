@@ -71,4 +71,4 @@ data modify storage humvil:conversations Current set value []
 scoreboard players reset @a humvil.conversations.id.receptor
 
 # Only run once per world:
-# scoreboard players set $init humvil.global 0
+scoreboard players set $init humvil.global 0
