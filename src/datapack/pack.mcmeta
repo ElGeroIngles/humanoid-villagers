@@ -1,6 +1,22 @@
 {
   "pack": {
-    "description": "Changes Villagers to Players",
+    "description": [
+        {
+          "text": "Humanoid Villagers ",
+          "color": "gold",
+          "italic": false
+        },
+        {
+          "text": "- ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "☽ Eclipse Studios",
+          "color": "blue",
+          "bold": false
+        }
+      ],
     "min_format": 88,
     "max_format": 88,
     "pack_format": 88
