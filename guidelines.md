@@ -14,6 +14,7 @@
 
 - To-Do:
     - Features:
+        - Advancements
         - Add non-binary option to the pool.
         - Indicate the office of the villager.
             - Icon next to their name with their proffession.
