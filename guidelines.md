@@ -16,8 +16,10 @@
     - Features:
         - Add non-binary option to the pool.
         - Indicate the office of the villager.
+            - Icon next to their name with their proffession.
+            - Hat indicating their profession.
     - Other:
-        - Remember to enable in `init.mcfunction` the last line so the config isn't applied everytime the user reloads the world.
+        - Buff the odds of a conversation to happen.
     - Bugs:
 
 - Done:
