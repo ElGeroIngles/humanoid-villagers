@@ -22,6 +22,7 @@
     - Other:
         - Buff the odds of a conversation to happen.
     - Bugs:
+        - Prevent the player to talk in third person in a dialog.
 
 - Done:
     - Add an uninstall function.
