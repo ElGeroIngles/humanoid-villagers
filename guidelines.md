@@ -14,7 +14,6 @@
 
 - To-Do:
     - Features:
-        - Add a uninstall function.
         - Advancements
         - Add non-binary option to the pool.
         - Indicate the office of the villager.
@@ -25,6 +24,7 @@
     - Bugs:
 
 - Done:
+    - Add a uninstall function.
     - Add a lot of names, dialogs and skins to the pools.
     - Sometimes some dialogs are spammed without any cooldown (most likely needs a rewrite of the system).
     - Sometimes a dialog is spammed in chat with no participat.

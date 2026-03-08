@@ -4,6 +4,14 @@
   "load.humvil.message.3": "Datapack reloaded succesfully!",
   "load.humvil.message.4": "By ",
   "load.humvil.message.5": "Click to see the changelog!",
+  
+  "uninstall.humvil.confirmation": "Are you sure that you want to uninstall this datapack?",
+  "uninstall.humvil.yes": "Yes",
+  "uninstall.humvil.no": "No",
+  "uninstall.humvil.deny": "Cool! Continue enjoying it :)",
+  "uninstall.humvil.message.1": "Uninstalling datapack...",
+  "uninstall.humvil.message.2": "Datapack uninstalled properly!",
+  "uninstall.humvil.message.3": "Thanks for using it ;)",
 
   "dialog.humvil.about.desc": "Transforms villagers found in villages into humans (NPCs)!\nThis uses the new Mannequin entity.",
   "dialog.humvil.about.config": "Config...",

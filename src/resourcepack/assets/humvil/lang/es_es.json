@@ -4,6 +4,14 @@
   "load.humvil.message.3": "¡Datapack reiniciado satisfactoriamente!",
   "load.humvil.message.4": "Por ",
   "load.humvil.message.5": "¡Haz click para ver los cambios!",
+  
+  "uninstall.humvil.confirmation": "¿Estás seguro de que quieres desinstalar el datapack?",
+  "uninstall.humvil.yes": "Si",
+  "uninstall.humvil.no": "No",
+  "uninstall.humvil.deny": "¡Bien! Sigue disfrutándolo :)",
+  "uninstall.humvil.message.1": "Desinstalando datapack...",
+  "uninstall.humvil.message.2": "¡Datapack desinstalando correctamente!",
+  "uninstall.humvil.message.3": "Gracias por usarlo ;)",
 
   "dialog.humvil.about.desc": "¡Transforma a los aldeanos encontrados en las aldeas en humanos (PNJs)!\nUtiliza la nueva entidad de Maniquí.",
   "dialog.humvil.about.config": "Configuración...",

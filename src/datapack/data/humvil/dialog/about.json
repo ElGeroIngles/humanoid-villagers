@@ -9,7 +9,7 @@
     },
     {
       "type": "minecraft:plain_message",
-      "contents": [{"text":"v1.0.0","underlined":true,"color":"gray","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/humanoid-villagers/changelog"},"hover_event":{"action":"show_text","value":[{"translate":"load.humvil.message.5"}]}}],
+      "contents": [{"text":"v1.0.1","underlined":true,"color":"gray","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/humanoid-villagers/changelog"},"hover_event":{"action":"show_text","value":[{"translate":"load.humvil.message.5"}]}}],
       "width": 300
     },
     {
