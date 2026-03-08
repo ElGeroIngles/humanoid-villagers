@@ -14,6 +14,7 @@
 
 - To-Do:
     - Features:
+        - Add a uninstall function.
         - Advancements
         - Add non-binary option to the pool.
         - Indicate the office of the villager.
